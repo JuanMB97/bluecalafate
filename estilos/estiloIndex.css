@@ -54,7 +54,7 @@ nav ul{
 }
 
 nav li:hover{
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: 0.3s;
 }
 
@@ -171,6 +171,9 @@ nav ul li a:hover{
   color: black;
 }
 
+.separador{
+  height: 50px;
+}
 .caja-nav{
   padding: 30px;
   display: flex;
@@ -215,9 +218,9 @@ nav ul li a:hover{
   display: flex;
   padding: 20px;
   justify-content: center;
-  box-shadow: 2px 2px 5px 5px rgb(138, 137, 137);
   margin-bottom: 10px;
-  background: linear-gradient(rgb(229, 229, 229),rgb(113, 115, 115));
+  background: linear-gradient(rgb(185, 187, 187),rgb(229, 229, 229));
+  text-decoration: underline;
 }
 
 .titulos-principales p{
@@ -243,8 +246,6 @@ nav ul li a:hover{
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s all;
-  color: rgb(0, 217, 255);
-  font-style: italic;
   display: flexbox;
 }
 
@@ -265,12 +266,16 @@ nav ul li a:hover{
   text-align: end;
   margin-top: 30%;
   font-size: 14px;
+  color: rgb(163, 162, 162);
+  font-family: sans-serif;
+  letter-spacing: 1px;
 }
 
 .precio-tarjeta{
   margin-top: 20%;
   text-align: right;
   margin-right: 15px;
+  font-size: 24px;
 }
 
 .mas-tarjeta{
@@ -328,6 +333,7 @@ nav ul li a:hover{
   background-color: black;
   font-size: 12px;
   border-top: 2px solid #4e4e4d;
+  padding-top: 50px;
 }
 
 .cajas-footer{
