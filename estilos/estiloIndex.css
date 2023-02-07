@@ -490,7 +490,7 @@ nav ul li a:hover{
 }
 
 /* ESTILOS PARA CELULAR*/
-@media screen and (max-width: 800px){
+@media screen and (max-width: 400px){
   /*Barra de titulo a boton*/
 
   /* Principio*/
