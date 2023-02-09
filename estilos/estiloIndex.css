@@ -518,7 +518,8 @@ h1{
     position: fixed;
     height: 100%;
     width: 70%;
-    top: 50px;  
+    top: 50px; 
+    visibility: hidden; 
   }
   .header-2 ul{
     background-color: rgb(23, 23, 201);
