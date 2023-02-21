@@ -1,25 +1,8 @@
 const d = document;
 
-export default function boton(){
-  d.addEventListener("click", e =>{
-    if(e.target.matches(boton)){
-      d.querySelector().classList.toggle()
-    }
-  })
-}
+d.addEventListener("click", (e)=>{
 
-d.addEventListener("DOMContentLoaded", e=>{
-  boton(".")
-})
-
-/*let counter = 1;
-
-setInterval(function(){
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if(counter > 4){
-    counter = 1;
+  if(e.target.matches(".boton-reserva")){
+    console.log("Es un boton de reserva")
   }
-},5000);
-*/
-
+});
