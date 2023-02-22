@@ -1,38 +1,39 @@
-body{
-  overflow-x:hidden;
+body {
+  overflow-x: hidden;
   margin: 0;
-  background-color:#e3e4e5;
+  background-color: #e3e4e5;
   background-size: cover;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-header{
+header {
   background: black;
   display: flex;
   width: 100%;
   position: fixed;
-  z-index:1000;
+  z-index: 1000;
   max-height: 100px;
-  box-shadow: 0px 2px 5px #36B5CD;
+  box-shadow: 0px 2px 5px #36b5cd;
 }
 
-h1{
+h1 {
   font-size: 22px;
 }
-.divlogo{
+.divlogo {
   margin: 10px 20px;
   width: 20%;
   display: flex;
 }
-#logo{
+#logo {
   max-width: 30px;
   max-height: 30px;
 }
-.caja-principal-titulo{
+.caja-principal-titulo {
   margin-left: 15px;
-  padding-top: 0px; 
+  padding-top: 0px;
 }
-.titulo-header{
+.titulo-header {
   font-size: 10px;
   color: #e3e4e5;
   padding: 0px 0px;
@@ -40,79 +41,78 @@ h1{
   font-size: 14px;
 }
 
-.barra-principal{
+.barra-principal {
   margin: 0px;
   padding: 0px;
 }
 
-.barra-principal li{
+.barra-principal li {
   width: 25%;
   display: inline-block;
 }
 
-.barra-principal li:hover{
+.barra-principal li:hover {
   transform: scale(1.02);
   transition: 0.3s;
 }
 
-.barra-principal li a{
+.barra-principal li a {
   text-decoration: none;
   border-radius: 10px dashed;
   color: white;
   text-align: center;
 }
 
-.barra-principal ul li a:hover{
+.barra-principal ul li a:hover {
   transform: scale(1.1);
   transition: 0.3s;
-  
 }
-.header-2{
+.header-2 {
   width: 60%;
   display: flex;
   justify-content: center;
 }
 
-.header-2 ul{
+.header-2 ul {
   display: inline-flex;
   width: 600px;
 }
 
-.caja-idioma{
+.caja-idioma {
   width: 20%;
   display: flex;
   justify-content: center;
   visibility: hidden;
 }
-.caja-idioma ul{
+.caja-idioma ul {
   list-style: none;
   padding: 0;
 }
-.idioma{
+.idioma {
   width: 100px;
   margin-top: 0px;
 }
-.boton-idioma{
+.boton-idioma {
   text-align: center;
 }
 
-.idioma > li{
+.idioma > li {
   position: relative;
   display: inline-block;
   width: 70px;
 }
 
-.idioma > li > a{
+.idioma > li > a {
   display: block;
   padding-top: 15px;
   padding-bottom: 15px;
   color: white;
   text-decoration: none;
 }
-.idioma li a:hover{
+.idioma li a:hover {
   color: #e3e4e5;
 }
-.elegir-idioma{
+.elegir-idioma {
   position: absolute;
   background: black;
   color: white;
@@ -121,27 +121,30 @@ h1{
   padding-left: 0;
   width: 120%;
 }
-.elegir-idioma img{
+.elegir-idioma img {
   width: 20px;
   margin-right: 5px;
 }
-.elegir-idioma li a{
-  line-height: 2w;
+.elegir-idioma li a {
   display: block;
   padding: 8px 15px;
   color: white;
   text-decoration: none;
 }
-.idioma:hover .elegir-idioma{
+.idioma:hover .elegir-idioma {
   display: block;
 }
 
-.elegir-idioma li a:hover{
+.elegir-idioma li a:hover {
   color: #e3e4e5;
 }
 
-.bienvenida{
-  background: linear-gradient(rgba(60, 62, 63, 0.452), rgba(92, 107, 109, 0.356)), url("../img/PeritoPrincipal.jpg") no-repeat;
+.bienvenida {
+  background: linear-gradient(
+      rgba(60, 62, 63, 0.452),
+      rgba(92, 107, 109, 0.356)
+    ),
+    url("../img/PeritoPrincipal.jpg") no-repeat;
   background-size: 100%;
   height: auto;
   padding-top: 50px;
@@ -149,16 +152,16 @@ h1{
   width: 100%;
 }
 
-
-.efecto-texto{
-  letter-spacing:-2px;
+.efecto-texto {
+  letter-spacing: -2px;
   color: #fff;
-  text-shadow: 0 0 5px rgb(129, 132, 132), 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #70c0e2, 0 0 25px #54b8ee;
+  text-shadow: 0 0 5px rgb(129, 132, 132), 0 0 10px #fff, 0 0 15px #fff,
+    0 0 20px #70c0e2, 0 0 25px #54b8ee;
   -webkit-text-fill-color: #aaebf8;
-  -webkit-text-stroke-color:#66f0ed;
-  -webkit-text-stroke-width:0.2px; 
+  -webkit-text-stroke-color: #66f0ed;
+  -webkit-text-stroke-width: 0.2px;
 }
-.caja-bienvenida{
+.caja-bienvenida {
   margin: 50px auto;
   height: 150px;
   display: flex;
@@ -169,25 +172,25 @@ h1{
   animation-iteration-count: infinite;
 }
 
-.txt-estatico{
+.txt-estatico {
   font-size: 60px;
   font-weight: 400;
   color: black;
 }
 
-.separador{
+.separador {
   height: 50px;
 }
-.caja-nav{
+.caja-nav {
   width: 100%;
   padding-bottom: 30px;
-  display:flex;
+  display: flex;
   background-color: #e3e4e5;
   justify-content: center;
   color: black;
 }
 
-.mi-tarjeta{
+.mi-tarjeta {
   height: 400px;
   width: 300px;
   margin: 10px;
@@ -196,10 +199,10 @@ h1{
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
   transition: 0.5s ease-in-out;
 }
-.mi-tarjeta:hover{
+.mi-tarjeta:hover {
   transform: translateY(20px);
 }
-.mi-tarjeta:before{
+.mi-tarjeta:before {
   content: "";
   position: absolute;
   display: block;
@@ -207,18 +210,21 @@ h1{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(38, 39, 39, 0.5), rgb(72, 73, 72));
+  background: linear-gradient(
+    to bottom,
+    rgba(38, 39, 39, 0.5),
+    rgb(72, 73, 72)
+  );
   z-index: 3;
   transition: 0.5s all;
   opacity: 0;
 }
 
-.mi-tarjeta:hover:before{
+.mi-tarjeta:hover:before {
   opacity: 1;
 }
 
-
-.titulos-principales{
+.titulos-principales {
   font-family: sans-serif;
   display: flex;
   padding: 20px;
@@ -226,18 +232,18 @@ h1{
   margin-bottom: 10px;
   background-color: black;
   letter-spacing: 1px;
-  box-shadow: 0px 2px 5px #36B5CD;
+  box-shadow: 0px 2px 5px #36b5cd;
 }
 
-.titulos-principales p{
+.titulos-principales p {
   color: rgb(157, 210, 228);
   font-size: 20px;
   margin: auto;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.img-lugares{
+.img-lugares {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -247,7 +253,7 @@ h1{
   border-radius: 1% 5px;
 }
 
-.info-tarjeta{
+.info-tarjeta {
   position: relative;
   z-index: 3;
   opacity: 0;
@@ -256,19 +262,20 @@ h1{
   display: flexbox;
 }
 
-.titulo-viaje{
+.titulo-viaje {
   text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   font-style: normal;
 }
 
-.mi-tarjeta:hover .info-tarjeta{
+.mi-tarjeta:hover .info-tarjeta {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.datos-viaje{
+.datos-viaje {
   padding-right: 15px;
   padding-left: 15px;
   text-align: first;
@@ -278,79 +285,82 @@ h1{
   letter-spacing: 1px;
 }
 
-.precio-tarjeta{
+.precio-tarjeta {
   margin-top: 20%;
   text-align: right;
   margin-right: 15px;
   font-size: 24px;
 }
 
-.mas-tarjeta{
+.mas-tarjeta {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-  padding-right: 15px;  
+  padding-right: 15px;
 }
 
-.mas-tarjeta a{
+.mas-tarjeta a {
   color: white;
   display: flex;
   justify-content: end;
   text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
 }
 
-.mas-tarjeta a p{
+.mas-tarjeta a p {
   padding: 10px;
   height: 25px;
   width: 70px;
   border: 2px solid white;
 }
 
-.mas-tarjeta a p:hover{
+.mas-tarjeta a p:hover {
   box-shadow: 1px 2px 10px rgb(191, 215, 216);
   transition: 0.4s all;
 }
 
-.titulos{
+.titulos {
   padding-top: 10px;
-  border: 1px solid  #e3e4e5;
-  background-color: #36B5CD;
-  border-radius: 15px 15px 0 0 ;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 1px solid #e3e4e5;
+  background-color: #36b5cd;
+  border-radius: 15px 15px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: underline;
-  color:white;
-}
-
-.titulos:hover{
   color: white;
 }
 
-.frases-pagina{
+.titulos:hover {
+  color: white;
+}
+
+.frases-pagina {
   font-size: 20px;
   text-align: center;
   padding: 5px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 21%;
 }
 
-.piepag{
+.piepag {
   background-color: black;
   font-size: 12px;
   border-top: 2px solid #4e4e4d;
   padding-top: 50px;
 }
 
-.cajas-footer{
+.cajas-footer {
   display: flex;
   color: gray;
   height: 300px;
   justify-content: center;
 }
 
-.tablaPie{
+.tablaPie {
   color: gray;
   text-align: left;
   margin: 30px;
@@ -359,82 +369,83 @@ h1{
   margin: 0 5%;
 }
 
-.insignias img{
+.insignias img {
   max-width: 150px;
   border-radius: 50%;
   border: 2px solid white;
 }
 
-.tripimg{
+.tripimg {
   height: 150px;
   width: 300px;
 }
-.iconos{
+.iconos {
   margin: 3px;
   max-height: 25px;
   margin: 5px;
   max-width: 25px;
 }
 
-.iconos:hover{
+.iconos:hover {
   border-radius: 10px;
   background: #2e2e2e;
 }
 
-.derechos{
+.derechos {
   border-top: solid 1px #4e4e4d;
   color: gray;
   text-align: center;
   padding-bottom: 5px;
 }
 
-.formulario{
+.formulario {
   display: flex;
   justify-content: center;
 }
 
-.formu-div{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.formu-div {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 16px;
   padding: 5px;
 }
 
-#boton-enviar:hover{
+#boton-enviar:hover {
   opacity: 0.9;
 }
 
-.reserva{
+.reserva {
   background-color: rgba(37, 53, 54, 0.4);
-  box-shadow: 3px 3px  3px gray;
+  box-shadow: 3px 3px 3px gray;
   padding: 20px;
   text-align: center;
 }
 
-.otros-content{
+.otros-content {
   background-color: RGBA(37, 53, 54, 0.4);
   display: flex;
   justify-content: center;
 }
 
-.contenedor{
+.contenedor {
   padding: 10px;
   text-decoration: underline;
   text-align: center;
 }
 
-.contenedor:hover{
+.contenedor:hover {
   transform: scale(1.1);
 }
 
-.introduccion{
+.introduccion {
   display: flex;
   justify-content: center;
   background: #e3e4e5;
-  padding-top:70px;
+  padding-top: 70px;
   padding-bottom: 50px;
 }
 
-.introduccion-texto{
+.introduccion-texto {
   font-size: 20px;
   font-family: sans-serif;
   font-weight: bolder;
@@ -445,27 +456,27 @@ h1{
   color: rgb(30, 70, 82);
 }
 
-.caja-intro img{
+.caja-intro img {
   max-width: 400px;
   margin-top: 17px;
 }
-.subtitulo{
+.subtitulo {
   text-align: center;
   background: #e3e4e5;
   text-decoration: underline;
   padding: 5px;
 }
-.titulo-promo{
-  color: #36B5CD;
+.titulo-promo {
+  color: #36b5cd;
 }
 
-.qr-wa{
+.qr-wa {
   height: 100px;
   width: 100px;
   border-radius: 10px;
 }
 
-.whatsapp-flotante{
+.whatsapp-flotante {
   position: fixed;
   z-index: 999;
   animation: efecto 1.2s infinite;
@@ -473,56 +484,60 @@ h1{
   bottom: 20px;
   border-radius: 50%;
 }
-.whatsapp-flotante:hover{
+.whatsapp-flotante:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
 
-@keyframes efecto{
-  0%{
-    box-shadow: 0 0 0  0 gray;
+@keyframes efecto {
+  0% {
+    box-shadow: 0 0 0 0 gray;
   }
-  100%{
-    box-shadow: 0 0 0  15px rgba(0,0,0,0);
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
   }
 }
-.boton-whats{
+.boton-whats {
   transition: ease 1s;
 }
 
 /* ESTILOS PARA CELULAR*/
-@media screen and (max-width: 650px){
+@media screen and (max-width: 650px) {
   /*Barra de titulo a boton*/
-  header{
-    box-shadow: 0px 2px 5px #36B5CD;
-    display:inline-block;
+  header {
+    box-shadow: 0px 2px 5px #36b5cd;
+    display: inline-block;
     height: 700px;
     width: 100%;
   }
 
   @keyframes rotacion {
-    from{transform: rotateZ(0deg);}
-    to{transform: rotateZ(360deg);}
+    from {
+      transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
   }
-  #logo{
+  #logo {
     height: 35px;
     animation-name: rotacion;
-    animation-duration: 2s ;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-  .titulo-header{
+  .titulo-header {
     visibility: hidden;
   }
-  
-  .header-2{
+
+  .header-2 {
     position: fixed;
     height: 100%;
     width: 70%;
-    top: 50px; 
-    visibility: hidden; 
+    top: 50px;
+    visibility: hidden;
   }
-  .header-2 ul{
+  .header-2 ul {
     background-color: rgb(23, 23, 201);
     display: block;
     padding-left: 2%;
@@ -532,97 +547,95 @@ h1{
     margin-bottom: 0px;
   }
 
-  .barra-principal li{
-    background-color:  rgb(23, 23, 201);
+  .barra-principal li {
+    background-color: rgb(23, 23, 201);
     display: flexbox;
     border-bottom: 1px solid white;
     width: 100%;
     font-size: 22px;
   }
 
-  .barra-principal li:focus .header-2{
+  .barra-principal li:focus .header-2 {
     visibility: hidden;
   }
 
   /* Principio*/
-  .bienvenida{
-    background: linear-gradient(rgba(60, 62, 63, 0.452), rgba(92, 107, 109, 0.356)), url("../img/glaciar2.jfif") no-repeat;
-    background-size: 100% 100% ;
+  .bienvenida {
+    background: linear-gradient(
+        rgba(60, 62, 63, 0.452),
+        rgba(92, 107, 109, 0.356)
+      ),
+      url("../img/glaciar2.jfif") no-repeat;
+    background-size: 100% 100%;
     height: 700px;
     width: 100%;
   }
-  .caja-bienvenida{
+  .caja-bienvenida {
     margin-top: 0px;
   }
-  .txt-estatico{
+  .txt-estatico {
     font-size: 28px;
   }
-  .frases-pagina{
+  .frases-pagina {
     margin-top: 0;
   }
   /* Baners*/
-  .introduccion{
+  .introduccion {
     margin-top: 0px;
     display: block;
-    padding-top:  0px;
-   
+    padding-top: 0px;
   }
 
-  .caja-intro{
+  .caja-intro {
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
-  .caja-intro img{
+  .caja-intro img {
     max-width: 70%;
   }
 
-  .caja-intro h2{
+  .caja-intro h2 {
     font-size: 20px;
   }
   /* Tarjetas*/
-  .caja-nav{
+  .caja-nav {
     display: block;
   }
 
-  .mi-tarjeta{
+  .mi-tarjeta {
     margin: 10%;
   }
 
   /* Pie de pagina*/
-  .piepag{
+  .piepag {
     padding-top: 10%;
   }
 
-  .cajas-footer{
+  .cajas-footer {
     height: 150px;
   }
 
-  .insignias img{
+  .insignias img {
     height: 50px;
     width: auto;
   }
 
-  .tripimg{
+  .tripimg {
     margin-top: 20%;
     height: 25%;
     width: auto;
-
   }
 
-  .qr-wa{
+  .qr-wa {
     margin-top: 20%;
     height: 20%;
     width: auto;
-  
   }
 
-  .whatsapp-flotante{
+  .whatsapp-flotante {
     right: 15%;
     bottom: 5%;
   }
-
-  
-
 }
