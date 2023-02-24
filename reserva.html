@@ -1,91 +1,127 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>Blue Calafate</title>
-   		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-		<link rel="stylesheet" href="estilos/estiloIndex.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		/>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Blue Calafate</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos/estiloIndex.css" />
+	<link rel="stylesheet" href="estilos/estiloreserva.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+	
+  </head>
 
-	<body>
+  <body>
+    <header>
+      <div class="divlogo">
+        <img src="img/logo.png" alt="" id="logo" />
+        <div class="caja-principal-titulo">
+          <div><p class="titulo-header">BLUE CALAFATE</p></div>
+          <div><p class="titulo-header">Traslados privados</p></div>
+        </div>
+      </div>
 
-		<header>
-			<div class="divlogo">
-						<img src="img/logo.png" alt="" id="logo">
-						<div class="caja-principal-titulo">
-							<div><p class="titulo-header">BLUE CALAFATE</p></div>
-							<div><p class="titulo-header">Traslados privados</p></div>
-						</div>
-			</div>
+      <nav class="header-2">
+        <ul class="barra-principal">
+          <li>
+            <a href="index.html"><p>INICIO</p></a>
+          </li>
+          <li>
+            <a href="Nosotros.html"><p>NOSOTROS</p></a>
+          </li>
+          <li>
+            <a href="#traslados-1"><p>TRASLADOS</p></a>
+          </li>
+          <li>
+            <a href="#contacto-1"><p>CONTACTO</p></a>
+          </li>
+        </ul>
+      </nav>
 
-			<nav class="header-2">
-				<ul class="barra-principal">
-					<li><a href="index.html"><p>INICIO</p></a></li>
-					<li><a href="Nosotros.html"><p>NOSOTROS</p></a></li>
-					<li><a href="#traslados-1"><p>TRASLADOS</p></a></li>
-					<li><a href="#contacto-1"><p>CONTACTO</p></a></li>
-				</ul>
-			</nav>
+      <div class="caja-idioma">
+        <ul class="idioma">
+          <li>
+            <a class="boton-idioma" href="">IDIOMA</a>
+            <ul class="elegir-idioma">
+              <li>
+                <a href="#"><img src="img/spain.png" alt="" />es</a>
+              </li>
+              <li>
+                <a href=""><img src="img/ingles.png" alt="" />en</a>
+              </li>
+              <li>
+                <a href=""><img src="img/brazil.png" alt="" />br</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-			<div class="caja-idioma">
-				<ul class="idioma">
-					<li><a class="boton-idioma" href="">IDIOMA</a>
-						<ul class="elegir-idioma">
-							<li><a href="#"><img src="img/spain.png" alt="">es</a></li>
-							<li><a href=""><img src="img/ingles.png" alt="">en</a></li>
-							<li><a href=""><img src="img/brazil.png" alt="">br</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</header>
-
-		<div class="conteniner-reserva">
-			<div class="box-reserva"></div>
-			<div class="box-reserva"></div>
+    <div class="conteiner-reserva">
+      <div class="box-reserva-izq">
+		<div>
+			<label for="">Nombre:</label>
+			<input type="text">
 		</div>
-
-		<footer class="piepag" id="contacto-1">
-			<div class="cajas-footer">
-				<div class="tablaPie">
-					<p>Al servicio</p>
-					<div class="insignias">
-						<img src="img/GL_LEG.png" alt="GL D.M.C">
-						<p>Leg 14.930</p>
-					</div>
-				</div>
-
-				<div class="tablaPie">
-					<p>Tripadvisor</p>
-					<img class="tripimg" src="img/tripadviso.png" alt="Tripadvisor">
-				</div>
-				<div class="tablaPie">
-					<p>Whatsapp</p>
-					<img class="qr-wa" src="img/qrwhatsapp.jpeg" alt="">
-				</div>
-			</div>
-			<div class="tablaPie">
-				<p>Nuestras redes</p>
-				<a href="http://facebook.com/Blue-Calafate-107232201496804" target="_blank"><img class="iconos" src="img/ifacebook.png" alt="icoFb"></a>
-				<a href="http://instagram.com/bluecalafatepatagonia" target="_blank"><img class="iconos" src="img/iinstagram.png" alt="icoIg"></a>
-				<p>bluecalafatepatagonia@gmail.com</p>
-			</div>
-			<div class="derechos">
-				<p>Todos los derechos reservados &#169;</p>
-				<p>Masadi Company</p>
+		<div>
+			<label for="">Apellido:</label>
+			<input type="text">
 		</div>
-
-		</footer>
-		<div class="whatsapp-flotante">
-			<a href="http://wa.me/+5492966764900?text=Hola quiero realizar una consulta" target="_blank">
-				<img class="boton-whats" src="img/whatsapp_boton.png" alt="">
-			</a>
+		<div>
+			<label for="">Personas:</label>
+			<input type="number" min="1" max="4">
 		</div>
-		
-	</body>
+	  </div>
+      <div class="box-reserva-der"></div>
+    </div>
+
+    <footer class="piepag" id="contacto-1">
+      <div class="cajas-footer">
+        <div class="tablaPie">
+          <p>Al servicio</p>
+          <div class="insignias">
+            <img src="img/GL_LEG.png" alt="GL D.M.C" />
+            <p>Leg 14.930</p>
+          </div>
+        </div>
+
+        <div class="tablaPie">
+          <p>Tripadvisor</p>
+          <img class="tripimg" src="img/tripadviso.png" alt="Tripadvisor" />
+        </div>
+        <div class="tablaPie">
+          <p>Whatsapp</p>
+          <img class="qr-wa" src="img/qrwhatsapp.jpeg" alt="" />
+        </div>
+      </div>
+      <div class="tablaPie">
+        <p>Nuestras redes</p>
+        <a
+          href="http://facebook.com/Blue-Calafate-107232201496804"
+          target="_blank"
+          ><img class="iconos" src="img/ifacebook.png" alt="icoFb"
+        /></a>
+        <a href="http://instagram.com/bluecalafatepatagonia" target="_blank"
+          ><img class="iconos" src="img/iinstagram.png" alt="icoIg"
+        /></a>
+        <p>bluecalafatepatagonia@gmail.com</p>
+      </div>
+      <div class="derechos">
+        <p>Todos los derechos reservados &#169;</p>
+        <p>Masadi Company</p>
+      </div>
+    </footer>
+    <div class="whatsapp-flotante">
+      <a
+        href="http://wa.me/+5492966764900?text=Hola quiero realizar una consulta"
+        target="_blank"
+      >
+        <img class="boton-whats" src="img/whatsapp_boton.png" alt="" />
+      </a>
+    </div>
+  </body>
 </html>

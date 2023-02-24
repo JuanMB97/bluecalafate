@@ -526,16 +526,17 @@ h1 {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
-  .titulo-header {
-    visibility: hidden;
-  }
 
+  .div-logo{
+    width: 100%;
+  }
   .header-2 {
+    margin-top: 53px;
     position: fixed;
     height: 100%;
-    width: 70%;
+    width: 40%;
     top: 50px;
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
   .header-2 ul {
     background-color: rgb(23, 23, 201);
