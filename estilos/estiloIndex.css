@@ -189,47 +189,59 @@ h1 {
 .separador {
   height: 50px;
 }
+
 .caja-nav {
-  width: 100%;
-  padding-bottom: 30px;
   display: flex;
-  background-color: #e3e4e5;
+}
+
+.box-phone {
+  display: flex;
   justify-content: center;
-  color: black;
+  width: 25%;
 }
 
 .mi-tarjeta {
-  height: 400px;
-  width: 300px;
-  margin: 10px;
-  background: #e3e4e5;
-  position: relative;
-  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.5s ease-in-out;
-}
-.mi-tarjeta:hover {
-  transform: translateY(20px);
-}
-.mi-tarjeta:before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(38, 39, 39, 0.5),
-    rgb(72, 73, 72)
-  );
-  z-index: 3;
-  transition: 0.5s all;
-  opacity: 0;
+  border-radius: 3%;
+  border: 2px solid black;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 5%;
+  height: auto;
+  max-height: 350px;
+  box-shadow: 3px 3px 5px gray;
 }
 
-.mi-tarjeta:hover:before {
-  opacity: 1;
+#aeropuerto {
+  background-image: url('/img/aeropuerto.jpg'); 
+}
+
+#perito-moreno {
+  background-image: url('/img/glaciar.jfif'); 
+}
+
+#minitrekking {
+  background-image: url('/img/miniT1.jfif');
+}
+
+#el-calafate {
+  background-image: url('/img/city.jfif'); 
+}
+
+#el-chalten {
+  background-image: url('/img/chalten.jfif'); 
+}
+
+#laguna-torre {
+  background-image: url('/img/Lagunatorre.jpeg'); 
+}
+
+#laguna-tres {
+  background-image: url('/img/Lagunadelostres.jpeg');
+}
+
+#laguna-capri  {
+  background-image: url('/img/Capri.jpeg');
 }
 
 .titulos-principales {
@@ -270,17 +282,17 @@ h1 {
   display: flexbox;
 }
 
+.mi-tarjeta:hover .info-tarjeta {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .titulo-viaje {
   text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   font-style: normal;
-}
-
-.mi-tarjeta:hover .info-tarjeta {
-  opacity: 1;
-  transform: translateY(0px);
 }
 
 .datos-viaje {
@@ -546,7 +558,8 @@ h1 {
   }
 
   .logo {
-    height: 35px;
+    margin-left: 10px;
+    height: 40px;
     animation-name: rotacion;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -561,7 +574,6 @@ h1 {
 
   .divlogo {
     width: 50%;
-    margin-left: 10px;
     justify-content: left;
   }
 
@@ -640,6 +652,7 @@ h1 {
     font-size: 28px;
   }
   .frases-pagina {
+    display: block;
     margin-top: 0;
   }
   /* Baners*/
@@ -667,8 +680,14 @@ h1 {
     display: block;
   }
 
+  .box-phone {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .mi-tarjeta {
-    margin: 10%;
+    width: 60%;
   }
 
   /* Pie de pagina*/
