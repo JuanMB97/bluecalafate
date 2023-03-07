@@ -5,22 +5,21 @@
     <title>Blue Calafate</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="estilos/estiloIndex.css" />
-	<link rel="stylesheet" href="estilos/estiloreserva.css">
+    <link rel="stylesheet" href="estilos/estiloreserva.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-	
   </head>
 
   <body>
     <header>
       <div class="divlogo">
-        <img src="img/menu_boton.png" alt="btnmenu" class="menu"/>
+        <img src="img/menu_boton.png" alt="btnmenu" class="menu" />
         <img src="img/logo.png" alt="" class="logo" />
         <div class="caja-principal-titulo">
-          <img src="img/FF2.png" alt="Blue Calafate" id="blue-calafate">
+          <img src="img/FF2.png" alt="Blue Calafate" id="blue-calafate" />
         </div>
       </div>
 
@@ -60,25 +59,36 @@
         </ul>
       </div>
     </header>
-
-    <div class="conteiner-reserva">
-      <div class="box-reserva-izq">
-		<div>
-			<label for="">Nombre:</label>
-			<input type="text">
-		</div>
-		<div>
-			<label for="">Apellido:</label>
-			<input type="text">
-		</div>
-		<div>
-			<label for="">Personas:</label>
-			<input type="number" min="1" max="4">
-		</div>
-	  </div>
-      <div class="box-reserva-der"></div>
+    <div class="formulario">
+      <form class="contact-form" target="_blank" action="https://formsubmit.co/bluecalafatepatagonia@gmail.com" method="post">
+        <legend>Reservar ahora</legend>
+        <input
+          type="text"
+          name="name"
+          placeholder="Escribe tu nombre"
+          title="Este campo solo acepta letras y espacios en blanco"
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Escribe tu email"
+          title="Escribe un correo de mail valido"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+          required
+          />
+        <input type="date" name="fecha" id="">
+        <input type="number" placeholder="Cantidad de personas" min="1" max="8">
+        <input type="submit" value="Reservar" />
+        <div class="contact-form-loader none">
+          <img src="img/cargando.svg" alt="Cargando..." />
+        </div>
+        <div class="contact-form-response none">
+          <p>Se ha realizado la reserva!</p>
+        </div>
+      </form>
     </div>
-
     <footer class="piepag" id="contacto-1">
       <div class="cajas-footer">
         <div class="tablaPie">
@@ -123,6 +133,6 @@
         <img class="boton-whats" src="img/whatsapp_boton.png" alt="" />
       </a>
     </div>
-    <script src="js/jsindex.js"></script>
+    <script src="js/jsreserva.js"></script>
   </body>
 </html>
