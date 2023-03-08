@@ -32,7 +32,7 @@ d.addEventListener("submit", (e) => {
 
   $loader.classList.remove("none");
 
-  fetch("https://formsubmit.co/ajax/bluecalafatepatagonia@gmail.com", {
+  fetch("https://formsubmit.co/ajax/37d4326f809f42ecef5106e3e5cc6d24", {
     method: "POST",
     body: new FormData(e.target)
   })
