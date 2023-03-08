@@ -26,15 +26,29 @@ d.addEventListener("keyup", (e) => {
 });
 
 d.addEventListener("submit", (e) => {
-  const $loader = d.querySelector(".contact-form-loader");
-  const $response = d.querySelector(".contact-form-response");
+  e.preventDefault();
+  const $loader = d.querySelector(".contact-form-loader"),
+        $response = d.querySelector(".contact-form-response");
 
   $loader.classList.remove("none");
 
-  setTimeout(() =>{
+  fetch("https://formsubmit.co/ajax/bluecalafatepatagonia@gmail.com", {
+    method: "POST",
+    body: new FormData(e.target)
+  })
+  .then(res => res.ok ? res.json(): Promise.reject(res))
+  .then(json => {
     $loader.classList.add("none");
     $response.classList.remove("none");
+    $response.innerHTML = `<p>${json.message}</p>`;
     $form.reset();
-    setTimeout(() => $response.classList.add("none"),3000);
-  }, 2000);
+  })
+  .catch(err => {
+    let message = err.statusText || "Ocurrio un error al reservar";
+    $response.innerHTML = `<p>Error: ${err.status}: ${message}</p>`;
+  })
+  .finally(() => setTimeout(() => {
+    $response.classList.add("none");
+    $response.innerHTML = "";
+    },3000));
 });

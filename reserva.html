@@ -60,26 +60,30 @@
       </div>
     </header>
     <div class="formulario">
-      <form class="contact-form" target="_blank" action="https://formsubmit.co/bluecalafatepatagonia@gmail.com" method="post">
+      <form class="contact-form">
         <legend>Reservar ahora</legend>
         <input
           type="text"
           name="name"
-          placeholder="Escribe tu nombre"
+          placeholder="Nombre y apellido"
           title="Este campo solo acepta letras y espacios en blanco"
           pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
           required
         />
+        <input type="date" name="fecha" name="date" required>
+        <input type="text" name="vuelo" placeholder="Linea aérea y N° de vuelo" required>
+        <input type="text" name="hotel" placeholder="Nombre Hotel" required>
+        <input type="number" name="personas" placeholder="Cantidad personas" min="1" max="8" required>
         <input
           type="email"
           name="email"
-          placeholder="Escribe tu email"
+          placeholder="Email"
           title="Escribe un correo de mail valido"
           pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
           required
-          />
-        <input type="date" name="fecha" id="">
-        <input type="number" placeholder="Cantidad de personas" min="1" max="8">
+        />
+        <input type="tel" name="telefono" placeholder="Whatsapp">
+        <textarea name="mensaje" cols="30" rows="10" placeholder="Consulte..."></textarea>
         <input type="submit" value="Reservar" />
         <div class="contact-form-loader none">
           <img src="img/cargando.svg" alt="Cargando..." />
@@ -89,6 +93,7 @@
         </div>
       </form>
     </div>
+
     <footer class="piepag" id="contacto-1">
       <div class="cajas-footer">
         <div class="tablaPie">

@@ -5,7 +5,7 @@
 .contact-form {
   --form-ok-color: #4caf50;
   --form-error-color: #f44336;
-  width: 80%;
+  width: 50%;
 }
 
 .contact-form > * {
@@ -54,8 +54,16 @@
   display: block;
   animation: show-message 1s 1 normal 0s ease-out both;
 }
+
+.contact-form-loader {
+  text-align: center;
+}
 .none {
   display: none;
+}
+
+textarea {
+  resize: none;
 }
 
 @keyframes show-message {
