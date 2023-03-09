@@ -290,6 +290,25 @@ h1 {
   background-image: url('/img/kayak.jpg');
 }
 
+#todo-glaciares {
+  background-image: url('/img/todoglaciares.jpeg');
+}
+
+#glaciares-gourmet {
+  background-image: url('/img/glaciaresgourmet.png');
+}
+
+#estancia-cristina {
+  background-image: url('/img/estanciacristina.jpg');
+}
+
+#glaciar-mayo {
+  background-image: url('/img/glaciarmayo.jpeg');
+}
+
+#safari-azul {
+  background-image: url('/img/safariazul.jpg');
+}
 #el-calafate {
   background-image: url('/img/city.jfif'); 
 }
@@ -336,6 +355,10 @@ h1 {
 
 #pp-bandera {
   background-image: url('/img/ppbandera.JPG');
+}
+
+#pliegue-tumbado {
+  background-image: url('/img/plieguetumbado.jpg');
 }
 
 .titulos-principales {

@@ -1,5 +1,10 @@
+body {
+  background-color: #36b5cd;
+}
 .formulario {
   padding-top: 70px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.9), rgba(0,0,0,.7)),url('../img/logo.png');
+  background-size: 32px;
 }
 
 .contact-form {
@@ -13,6 +18,7 @@
   margin: 1rem auto;
   display: block;
   width: 100%;
+  border-radius: 10px;
 }
 
 .contact-form legend,
@@ -20,7 +26,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  color: black;
+  color: white;
 }
 
 .contact-form input {
