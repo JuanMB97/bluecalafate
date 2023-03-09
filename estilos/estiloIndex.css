@@ -208,36 +208,56 @@ h1 {
 
 .caja-nav {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 50px 0px 0px;
 }
 
 .box-phone-dos {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 50%;
+  height: 100%;
+  margin: auto;
 }
 
 .box-phone-tres {
   display: flex;
   justify-content: center;
-  width: 100%;
+  justify-items: center;
+  width: 30%;
+  height: 100%;
+  margin: auto;
 }
 
 .box-phone-cuatro {
+  margin: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  justify-items: center;
 }
 
-.mi-tarjeta {
-  width: 100%;
+.box-phone-cuatro .mi-tarjeta {
+  width: 300px;
   border-radius: 3%;
   border: 2px solid black;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
+  height: 400px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+.box-phone-tres .mi-tarjeta {
+  width: 300px;
+  border-radius: 3%;
+  border: 2px solid black;
+  background-repeat: no-repeat;
+  background-size:cover;
   background-position: center;
   background-color: black;
-  height: 100%;
+  height: 400px;
   box-shadow: 3px 3px 5px gray;
 }
 
@@ -282,84 +302,252 @@ h1 {
   background-image: url('/img/glaciar.jfif'); 
 }
 
+#perito-moreno:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/glaciar.jfif'); 
+}
+
 #minitrekking {
   background-image: url('/img/miniT1.jfif');
+}
+
+#minitrekking:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ),  url('/img/miniT1.jfif');
+}
+
+#safari-azul {
+  background-image: url('/img/safariazul.jpg');
+}
+
+#safari-azul:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/safariazul.jpg');
 }
 
 #kayak {
   background-image: url('/img/kayak.jpg');
 }
 
+#kayak:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/kayak.jpg');
+}
+
 #todo-glaciares {
   background-image: url('/img/todoglaciares.jpeg');
+}
+
+#todo-glaciares:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/todoglaciares.jpeg');
 }
 
 #glaciares-gourmet {
   background-image: url('/img/glaciaresgourmet.png');
 }
 
+#glaciares-gourmet:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/glaciaresgourmet.png');
+}
+
+
 #estancia-cristina {
   background-image: url('/img/estanciacristina.jpg');
 }
+
+#estancia-cristina:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/estanciacristina.jpg');
+}
+
 
 #glaciar-mayo {
   background-image: url('/img/glaciarmayo.jpeg');
 }
 
-#safari-azul {
-  background-image: url('/img/safariazul.jpg');
-}
-#el-calafate {
-  background-image: url('/img/city.jfif'); 
+#glaciar-mayo:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/glaciarmayo.jpeg');
 }
 
 #el-chalten {
   background-image: url('/img/chalten.jfif'); 
 }
 
-#laguna-torre {
-  background-image: url('/img/Lagunatorre.jpeg'); 
-}
-
-#laguna-tres {
-  background-image: url('/img/Lagunadelostres.jpeg');
+#el-chalten:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/chalten.jfif'); 
 }
 
 #laguna-capri  {
   background-image: url('/img/Capri.jpeg');
 }
 
+#laguna-capri:hover  {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/Capri.jpeg');
+}
+
+#laguna-tres {
+  background-image: url('/img/Lagunadelostres.jpeg');
+}
+
+#laguna-tres:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/Lagunadelostres.jpeg');
+}
+
+#laguna-torre {
+  background-image: url('/img/Lagunatorre.jpeg'); 
+}
+
+
+#laguna-torre:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/Lagunatorre.jpeg'); 
+}
+
 #lago-desierto {
   background-image: url('/img/lagodeldesierto.jfif');
+}
+
+#lago-desierto:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/lagodeldesierto.jfif');
+}
+
+#pliegue-tumbado {
+  background-image: url('/img/plieguetumbado.jpg');
+}
+
+#pliegue-tumbado:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/plieguetumbado.jpg');
 }
 
 #cueva-manos {
   background-image: url('/img/cueva-manos.jpg');
 }
 
+#cueva-manos:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/cueva-manos.jpg');
+}
+
 #lago-roca {
   background-image: url('/img/lagoroca.jpeg');
+}
+
+
+#lago-roca:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/lagoroca.jpeg');
 }
 
 #frontera {
   background-image: url('/img/chilearg.svg');
 }
 
+#frontera:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/chilearg.svg');
+}
+
 #punta-walichu {
   background-image: url('/img/puntawalichu.jpg');
+}
+
+#punta-walichu:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/puntawalichu.jpg');
+}
+
+#el-calafate {
+  background-image: url('/img/city.jfif'); 
+}
+
+#el-calafate:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/city.jfif'); 
 }
 
 #nibepo-aike {
   background-image: url('/img/nibepoaike.jpg');
 }
 
+#nibepo-aike:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(66, 81, 87, 0.5),
+    rgba(76, 104, 110, 0.5)
+  ), url('/img/nibepoaike.jpg');
+}
+
+
 #pp-bandera {
   background-image: url('/img/ppbandera.JPG');
 }
 
-#pliegue-tumbado {
-  background-image: url('/img/plieguetumbado.jpg');
-}
+
 
 .titulos-principales {
   font-family: sans-serif;
@@ -421,6 +609,11 @@ h1 {
   text-align: right;
   margin-right: 15px;
   font-size: 24px;
+}
+
+.precio-tarjeta p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .mas-tarjeta {
