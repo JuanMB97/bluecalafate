@@ -191,15 +191,17 @@ h1 {
   justify-content: center;
   align-items: center;
   opacity: 0.8;
-  padding: 15px 10px;
   animation-iteration-count: infinite;
 }
 
 .txt-estatico {
-  font-size: 60px;
-  font-weight: 400;
+ 
   color: black;
   text-align: center;
+}
+
+h1{
+  font-size: 60px;
 }
 
 .separador {
