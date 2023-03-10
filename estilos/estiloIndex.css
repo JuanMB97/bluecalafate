@@ -996,18 +996,38 @@ h1 {
   /* Tarjetas*/
   .caja-nav {
     display: block;
+    margin: 0px 0px 0px 0px;
   }
 
-  .box-phone {
+  .box-phone-dos {
+    width: 100%;
+  }
+  .box-phone-dos .mi-tarjeta {
+    width: 100%;
+  }
+
+  .box-phone-tres {
     display: flex;
     justify-content: center;
     width: 100%;
   }
 
-  .mi-tarjeta {
-    width: 60%;
+  .box-phone-tres .mi-tarjeta {
+    margin: 25px 0px 25px 0px ;
   }
 
+  .box-phone-cuatro {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .box-phone-cuatro .mi-tarjeta{
+   margin: 25px 0px 25px 0px; 
+  }
+
+  .info-tarjeta {
+    opacity: 1;
+  }
   /* Pie de pagina*/
   .piepag {
     padding-top: 10%;
