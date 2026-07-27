@@ -1,0 +1,78 @@
+.pm-shared-section{
+  width:100%;
+  color:#101828;
+}
+
+/* HERO */
+
+.pm-hero{
+  position:relative;
+  height:720px;
+  /* background:url('/src/assets/portada.jpg') center center/cover; */
+  overflow:hidden;
+  
+}
+
+
+
+.pm-icon-p {
+   height: 50px;
+   color: white;
+}
+
+.pm-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,#ffffff 30%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0));
+}
+
+.pm-hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1300px;
+  margin:auto;
+  padding:70px;
+}
+
+.pm-left{
+  width:600px;
+}
+
+.pm-left h1{
+  font-size:72px;
+  line-height:1;
+  color:#05053d;
+  margin-bottom:25px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.pm-left h1 span{
+  color:#0d47ff;
+}
+
+.pm-left p{
+  font-size:24px;
+  line-height:1.6;
+  color:#334155;
+}
+
+.pm-features{
+  display:flex;
+  gap:50px;
+  margin-top:50px;
+  
+}
+
+.pm-feature{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+ 
+}
+
+.pm-feature img{
+    height: 40px;
+    background-color: #0d47ff;
+    border-radius: 50%;
+    padding: 5px;
+}

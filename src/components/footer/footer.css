@@ -1,0 +1,348 @@
+.blue-footer {
+
+  padding: 100px;
+  background-image:
+    linear-gradient(to right, rgba(13, 71, 255, 1) 0%, transparent 100%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+
+.image-background-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+
+
+}
+
+.conteiner-blue-footer {
+  border: 3px solid black;
+  border-radius: 4%;
+}
+
+
+.footer-top {
+
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+
+  gap: 50px;
+
+  padding-bottom: 50px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+/* LOGO */
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(253, 253, 253);
+  border-radius: 5%;
+}
+
+.footer-logo img {
+
+  height: 200px;
+}
+
+.footer-description {
+
+  font-size: 20px;
+  line-height: 1.7;
+  color: white;
+
+  margin-bottom: 35px;
+
+  max-width: 420px;
+
+}
+
+/* WHATSAPP */
+
+.footer-whatsapp {
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+
+}
+
+.footer-whatsapp-icon {
+
+  width: 78px;
+  height: 78px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+
+}
+
+
+
+.footer-whatsapp-text small {
+
+  display: block;
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+
+  margin-bottom: 6px;
+
+}
+
+.footer-whatsapp-text strong {
+
+  font-size: 22px;
+  font-weight: 700;
+
+}
+
+/* COLUMNS */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-column h3 {
+
+  font-size: 28px;
+  font-weight: 700;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+}
+
+.footer-column h3 li{
+  text-align: center;
+  color: #2f6fff;
+
+}
+
+.footer-column ul {
+
+  list-style: none;
+
+}
+
+.footer-column ul li {
+  margin-bottom: 22px;
+
+  font-size: 20px;
+
+  display: flex;
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+}
+
+.footer-column ul li i {
+
+  color: #2f6fff;
+
+  font-size: 16px;
+
+}
+
+/* CONTACT */
+
+.container-info-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.contact-item {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.9);
+
+}
+
+.contact-item i {
+
+  font-size: 24px;
+  color: #2f6fff;
+
+  margin-top: 3px;
+
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 40px;
+
+  padding: 38px 0;
+
+  align-items: center;
+
+}
+
+/* BOTTOM BOX */
+
+.bottom-box {
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+}
+
+.bottom-box i {
+
+  font-size: 46px;
+  color: #2f6fff;
+
+}
+
+.bottom-box h4 {
+
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 4px;
+
+}
+
+.bottom-box p {
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.72);
+
+}
+
+.fa-solid {
+  text-decoration: none;
+  color: white;
+  transition: .3s ease-out;
+}
+
+.fa-solid:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* SOCIAL */
+
+.social-icons {
+
+  display: flex;
+  gap: 18px;
+
+  margin-top: 10px;
+
+}
+
+.social-icons img {
+
+  width: 54px;
+  height: 54px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(255, 255, 255, 0.22);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 24px;
+  color: #fff;
+
+  transition: 0.3s;
+
+}
+
+.social-icons a:hover {
+
+  transform: translateY(-4px);
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:1200px) {
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .blue-footer {
+    padding: 50px 25px 0;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    font-size: 42px;
+  }
+
+  .footer-description {
+    font-size: 18px;
+  }
+
+  .footer-column h3 {
+    font-size: 24px;
+  }
+
+  .footer-column ul li,
+  .contact-item {
+    font-size: 18px;
+  }
+}

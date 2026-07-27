@@ -1,0 +1,56 @@
+/* HORARIOS */
+
+.pm-timebar{
+  max-width:1320px;
+  margin:-80px auto 40px;
+  background:#fff;
+  border-radius:28px;
+  display:flex;
+  justify-content:space-between;
+  padding:35px 40px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  position:relative;
+  z-index:10;
+}
+
+.pm-time-item{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.pm-icon{
+  width:70px;
+  height:70px;
+  border-radius:50px;
+  background:#0B46FF;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:32px;
+}
+
+.pm-time-item strong{
+  font-size:34px;
+  color:#0a1445;
+}
+
+.pm-divider{
+  width:1px;
+  background:#e5e7eb;
+}
+
+
+@media(max-width:980px){
+
+
+  .pm-timebar{
+    flex-direction:column;
+    gap:25px;
+  }
+
+  .pm-divider{
+    display:none;
+  }
+}
