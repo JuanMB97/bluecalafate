@@ -9,7 +9,7 @@ function PeritoApp() {
       <Portada
         place="Perito Moreno"
         phrase="Traslado compartido al Glaciar Perito Moreno desde El Calafate. Cómodo, seguro y económico."
-        
+        image="portada.jpg"
       />
 
       <div className="pm-grid">

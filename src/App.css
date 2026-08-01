@@ -4,6 +4,13 @@ body{
   font-family:'Poppins',sans-serif;
 }
 
+.conteiner-cards{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+
 
 
 /* GRID */

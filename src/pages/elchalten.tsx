@@ -9,7 +9,7 @@ function ElChalten() {
       <Portada 
         place="El Chalten"
         phrase="Traslado compartido a El Chalten desde El Calafate. Cómodo, seguro y económico."
-        
+        image="fitz-roy.jpg"
       />
 
       <div className="pm-grid">

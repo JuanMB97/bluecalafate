@@ -1,16 +1,23 @@
 .pm-shared-section{
+  position: relative;
   width:100%;
   color:#101828;
+  height: 850px;
 }
 
 /* HERO */
 
 .pm-hero{
-  position:relative;
   height:720px;
-  /* background:url('/src/assets/portada.jpg') center center/cover; */
-  overflow:hidden;
+ 
   
+}
+
+.portada-img{
+  position: absolute;
+  height: 700px;
+  width: 100%;
+  object-fit: cover;
 }
 
 

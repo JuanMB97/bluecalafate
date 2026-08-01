@@ -2,13 +2,16 @@ import './portada.css';
 import { BannerInfo } from "../banner_info/banner";
 import { NavBar } from "../navbar/navbar";
 
-function Portada({place, phrase}: {place: string, phrase: string}) {
+function Portada({place, phrase, image}: {place: string, phrase: string, image: string}) {
+
+  const link_img = '/src/assets/' + image;
 
   return (
 
     <section className="pm-shared-section">
-
+      <img className="portada-img" src={link_img} alt="" />
       <NavBar></NavBar>
+      
       <div className="pm-hero">
         <div className="pm-overlay"></div>
           
