@@ -1,22 +1,103 @@
 .box-card{
   height: 500px;
   border-radius: 5%;
-  background-color: gold;
-  width: 400px;
+  width: 20%;
+  position: relative;
+  background: linear-gradient(0deg, #ffffff 25%,rgba(3, 43, 177, 0.4) 50%,rgba(2, 49, 87, 0) );
+  transition: 1.2s ease-in-out;
+  margin: 0;
+  transition: .3s ease-in;
+}
+
+.box-card:hover {
+  transform: scale(1.02);
 }
 
 .background-card{
-
+  position: absolute;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
 }
 
-.box-info-card{
 
+.box-info-card{
+  position: absolute;
+  border-radius: 5%;
+  inset: 0;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 15px 45px rgba(0,0, 0, .7);
 }
 
 .card-top-info{
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 5%;
+  padding-top: 5%;
+}
 
+.info-left{
+  align-items: center;
+  width: 30%;
+  height: 100px;
+  background-color: #0d47ff;
+  border-radius: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.info-left img {
+  height: 50px;
+}
+
+.info-right{
+  color: #0d47ff;
+  width: 50%;
+}
+
+.text-capacidad {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.card-bottom-info p {
+  
 }
 
 .card-bottom-info{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.card-bottom-info button{
+  height: 50px;
+  width: 50%;
+  font-size: 24px;
+  background-color: white;
+  color: #0d47ff;
+  border: 0px;
+  transition: .4s ease-in;
 
 }
+
+.box-card:hover button{
+  cursor: pointer;
+
+}
+

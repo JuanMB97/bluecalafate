@@ -1,5 +1,4 @@
 import './portada.css';
-import { BannerInfo } from "../banner_info/banner";
 import { NavBar } from "../navbar/navbar";
 
 function Portada({place, phrase, image}: {place: string, phrase: string, image: string}) {
@@ -51,7 +50,7 @@ function Portada({place, phrase, image}: {place: string, phrase: string, image: 
         </div>
       </div>
 
-    <BannerInfo />
+   
 
     </section>
   )

@@ -1,3 +1,4 @@
+import { BannerInfo } from "../components/banner_info/banner";
 import { Footer } from "../components/footer/footer";
 import FormularioReserva from "../components/formulario/form_reserva";
 import { Portada } from "../components/portada/portada";
@@ -11,6 +12,8 @@ function PeritoApp() {
         phrase="Traslado compartido al Glaciar Perito Moreno desde El Calafate. Cómodo, seguro y económico."
         image="portada.jpg"
       />
+
+      <BannerInfo/>
 
       <div className="pm-grid">
         <FormularioReserva></FormularioReserva>
