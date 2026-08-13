@@ -12,12 +12,13 @@ function CardTravel({img, capacidad}:{img: string, capacidad: number}){
           </div>
 
           <div className="info-right">
-            <p>Hasta</p>
-            <p>personas</p>
+            <p>HASTA</p>
+            <p>PERSONAS</p>
           </div>
         </div>
         <div className="card-bottom-info">
-          <button onClick={() => alert('Hola')}>Ver Mas</button>
+          <img src="/src/assets/maletin.png" alt="" />
+          <p className='max-equipaje'>Hasta {capacidad} equipajes</p>
         </div>
       </div>
     </div>

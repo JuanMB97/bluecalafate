@@ -60,8 +60,8 @@
   font-size: 20px;
   line-height: 1.7;
   color: white;
-
-  margin-bottom: 35px;
+  background-color: rgb(85, 83, 83);
+  margin: 0;
 
   max-width: 420px;
 

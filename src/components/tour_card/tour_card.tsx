@@ -1,6 +1,8 @@
 import './tour_card.css';
 
-function TourCard({tourimg, logo, linkTour}: {tourimg: string, logo:string, linkTour: string}) {
+function TourCard({title, tourimg, logo, linkTour}: {title: string, tourimg: string, logo:string, linkTour: string}) {
+  const title_array = title.split(" ");
+
   return (
     <div className='box-tour-container'>
       <img src={"/src/assets/" +  tourimg} alt="" className='tour-img' />
@@ -8,10 +10,10 @@ function TourCard({tourimg, logo, linkTour}: {tourimg: string, logo:string, link
         <img src={"/src/assets/" + logo} alt="" />
       </div>
       <div className='tour-info'>
-        <p className='p-tour-first'>TRASLADOS</p>
-        <p className='p-tour-second'>AEROPUERTO</p>
+        <p className='p-tour-first'>{title}</p>
+        <p className='p-tour-second'>{title}</p>
         <div className='tour-span'>
-          <span>En tan solo 20 minutos!</span>
+         
           <span>Te esperamos y te llevamos a tu destino</span>
         </div>
        

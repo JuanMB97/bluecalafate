@@ -7,11 +7,11 @@ body{
 }
 
 .conteiner-cards{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
-  justify-content: space-evenly;
-  height: 700px;
   overflow: hidden;
+  place-items: center;
 }
 
 .contain-cards-tours{

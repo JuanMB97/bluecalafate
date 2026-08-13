@@ -26,13 +26,50 @@ function AppMain() {
           img="h1_car.png"
           capacidad={11}
         />
+          <CardTravel
+          img="sprinter9plus1.png"
+          capacidad={9}
+        />
+          <CardTravel
+          img="sprinter19plus1.png"
+          capacidad={19}
+        />
       </div>
 
       <div className="contain-cards-tours">
-        <TourCard linkTour="/peritomoreno" tourimg="aeropuerto.jpeg" logo="icon_plane.png"/>
-        <TourCard linkTour="/citytour" tourimg="city.jfif" logo="icon_camera.png"/>
-        <TourCard linkTour="/elchalten" tourimg="chalten-city.jpg" logo="icon_"/>
-      
+        <TourCard
+          linkTour="/peritomoreno"
+          tourimg="pasarelas.jpg"
+          logo="icon_plane.png"
+          title="Perito Moreno"
+        />
+
+          <TourCard
+          linkTour="/peritomoreno"
+          tourimg="pasarelas.jpg"
+          logo="icon_plane.png"
+          title="Perito Moreno"
+        />
+
+          <TourCard
+          linkTour="/peritomoreno"
+          tourimg="pasarelas.jpg"
+          logo="icon_plane.png"
+          title="Perito Moreno"
+        />
+          <TourCard
+          linkTour="/peritomoreno"
+          tourimg="pasarelas.jpg"
+          logo="icon_plane.png"
+          title="Perito Moreno"
+        />
+
+        <TourCard
+          title="City Tour" 
+          linkTour="/citytour" 
+          tourimg="city.jfif" 
+          logo="icon_camera.png" />
+
       </div>
 
       <Footer>
