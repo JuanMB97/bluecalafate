@@ -30,6 +30,12 @@
   text-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
 }
 
+.nav-link.active {
+  color: #0d47ff;
+  border-bottom: 2px solid #0d47ff;
+  padding-bottom: 2px;
+}
+
 .nav-whatsapp{
   position: fixed;
   right: 5px;
@@ -70,8 +76,29 @@
 }
 .box-logo img{
   height: 150px;
-  
 }
 
-
-
+@media (max-width: 768px) {
+  .box-navbar {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .box-logo img {
+    height: 80px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .nav-whatsapp {
+    position: static;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+}

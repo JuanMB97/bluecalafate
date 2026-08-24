@@ -201,13 +201,23 @@ body{
     gap:20px;
   }
 
-  .pm-navbar nav{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
 }
 
-
-
-
+@media(max-width: 768px) {
+  .conteiner-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .contain-cards-tours {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pm-input input, .pm-input select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .pm-form-card, .pm-summary-card {
+    padding: 20px;
+  }
+}

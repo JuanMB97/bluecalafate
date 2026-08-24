@@ -1,83 +1,73 @@
-import CardTravel from "../components/card-travel/card_travel";
-import { Footer } from "../components/footer/footer";
-import { Portada } from "../components/portada/portada";
-import TourCard from "../components/tour_card/tour_card";
-
+import { useState, useEffect } from 'react';
+import CardTravel from '../components/card-travel/card_travel';
+import { Portada } from '../components/portada/portada';
+import TourCard from '../components/tour_card/tour_card';
+import { Banda_Beneficios } from '../components/banda_beneficios/banda_beneficios';
+import type { Tour, Vehicle } from '../types';
+import { tourService, vehicleService } from '../services';
 
 function AppMain() {
+  const [tours, setTours] = useState<Tour[]>([]);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const [toursRes, vehiclesRes] = await Promise.all([
+          tourService.getAll(),
+          vehicleService.getAll(),
+        ]);
+        setTours(toursRes);
+        setVehicles(vehiclesRes);
+      } catch (err) {
+        console.error('Error cargando datos principales:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadData();
+  }, []);
+
   return (
     <>
       <Portada
         place="Traslados en el sur de Argentina"
-        phrase="Traslado compartido al Glaciar Perito Moreno desde El Calafate. Cómodo, seguro y económico."
+        phrase="Traslados compartidos y privados en El Calafate y El Chaltén. Cómodo, seguro y económico."
         image="portada_car.jpeg"
+        highlightText="Patagonia"
+        serviceType="Servicio Exclusivo"
+        dailyDepartures="Salidas diarias"
       />
 
       <div className="conteiner-cards">
-        <CardTravel
-          img="spin_car.png"
-          capacidad={4}
-        />
-        <CardTravel
-          img="expert_car.webp"
-          capacidad={6}
-        />
-        <CardTravel
-          img="h1_car.png"
-          capacidad={11}
-        />
-          <CardTravel
-          img="sprinter9plus1.png"
-          capacidad={9}
-        />
-          <CardTravel
-          img="sprinter19plus1.png"
-          capacidad={19}
-        />
+        {vehicles.map((v) => (
+          <CardTravel key={v.id} img={v.image} capacidad={v.capacity} />
+        ))}
       </div>
 
       <div className="contain-cards-tours">
-        <TourCard
-          linkTour="/peritomoreno"
-          tourimg="pasarelas.jpg"
-          logo="icon_plane.png"
-          title="Perito Moreno"
-        />
-
-          <TourCard
-          linkTour="/peritomoreno"
-          tourimg="pasarelas.jpg"
-          logo="icon_plane.png"
-          title="Perito Moreno"
-        />
-
-          <TourCard
-          linkTour="/peritomoreno"
-          tourimg="pasarelas.jpg"
-          logo="icon_plane.png"
-          title="Perito Moreno"
-        />
-          <TourCard
-          linkTour="/peritomoreno"
-          tourimg="pasarelas.jpg"
-          logo="icon_plane.png"
-          title="Perito Moreno"
-        />
-
-        <TourCard
-          title="City Tour" 
-          linkTour="/citytour" 
-          tourimg="city.jfif" 
-          logo="icon_camera.png" />
-
+        {loading ? (
+          <p style={{ textAlign: 'center', color: '#0a1445', padding: '40px', fontWeight: 600 }}>
+            Cargando destinos...
+          </p>
+        ) : (
+          tours.map((tour) => (
+            <TourCard
+              key={tour.id}
+              linkTour={`/tours/${tour.slug}`}
+              tourimg={tour.tourCardImg}
+              logo={tour.logoIcon}
+              title={tour.title}
+              description={tour.phrase}
+            />
+          ))
+        )}
       </div>
 
-      <Footer>
-
-      </Footer>
+      <Banda_Beneficios />
     </>
-
-  )
+  );
 }
 
 export default AppMain;

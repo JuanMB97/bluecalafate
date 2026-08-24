@@ -83,3 +83,33 @@
     border-radius: 50%;
     padding: 5px;
 }
+
+@media (max-width: 768px) {
+  .pm-shared-section {
+    height: auto;
+    min-height: 80vh;
+  }
+  .portada-img {
+    height: 100%;
+  }
+  .pm-hero {
+    height: auto;
+    min-height: 80vh;
+  }
+  .pm-hero-content {
+    padding: 120px 20px 40px; /* Leave space for navbar */
+  }
+  .pm-left {
+    width: 100%;
+  }
+  .pm-left h1 {
+    font-size: 42px;
+  }
+  .pm-left p {
+    font-size: 18px;
+  }
+  .pm-features {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
