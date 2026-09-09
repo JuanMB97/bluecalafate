@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Portada } from '../components/portada/portada';
-import TourCard from '../components/tour_card/tour_card';
+import ToursContainer from '../components/tours_container/ToursContainer';
 import { Banda_Beneficios } from '../components/banda_beneficios/banda_beneficios';
 import type { Tour } from '../types';
 import { tourService } from '../services';
+import './services.css';
 
 function ServiceApp() {
+  const { t } = useTranslation();
   const [tours, setTours] = useState<Tour[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,41 +29,21 @@ function ServiceApp() {
   return (
     <>
       <Portada
-        place="Nuestros Servicios"
-        phrase="Traslados privados, compartidos y excursiones personalizadas en El Calafate y El Chaltén."
-        image="portada.jpg"
-        highlightText="Premium"
-        serviceType="Servicio Exclusivo"
-        dailyDepartures="Atención 24/7"
+        place={t('portada.services_title', 'Nuestros Servicios')}
+        phrase={t('portada.services_phrase', 'Traslados privados, compartidos y excursiones personalizadas en El Calafate y El Chaltén.')}
+        image="portada_tours.jpg"
+        highlightText={t('portada.services_highlight', 'Premium')}
+        serviceType={t('portada.service_type_exclusive', 'Servicio Exclusivo')}
+        dailyDepartures={t('portada.support_24_7', 'Atención 24/7')}
       />
 
-      <div style={{ maxWidth: '1300px', margin: '40px auto 20px', padding: '0 20px' }}>
-        <h2 style={{ fontSize: '32px', color: '#0a1445', marginBottom: '10px' }}>
-          Excursiones y Traslados Disponibles
-        </h2>
-        <p style={{ color: '#64748b' }}>
-          Selecciona cualquiera de nuestros destinos para ver horarios, precios y reservar directamente por WhatsApp.
-        </p>
-      </div>
-
-      <div className="contain-cards-tours">
-        {loading ? (
-          <p style={{ textAlign: 'center', color: '#0a1445', padding: '40px', fontWeight: 600 }}>
-            Cargando destinos...
-          </p>
-        ) : (
-          tours.map((tour) => (
-            <TourCard
-              key={tour.id}
-              linkTour={`/tours/${tour.slug}`}
-              tourimg={tour.tourCardImg}
-              logo={tour.logoIcon}
-              title={tour.title}
-              description={tour.phrase}
-            />
-          ))
-        )}
-      </div>
+      <ToursContainer
+        tours={tours}
+        loading={loading}
+        title={t('services_page.title', 'Excursiones y Traslados Disponibles')}
+        subtitle={t('services_page.subtitle', 'Selecciona cualquiera de nuestros destinos para ver horarios, precios y reservar directamente por WhatsApp.')}
+        badge={t('services_page.badge', 'NUESTROS SERVICIOS')}
+      />
 
       <Banda_Beneficios />
     </>

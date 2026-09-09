@@ -1,0 +1,314 @@
+/* ==========================================================================
+   BLUE CALAFATE - FALDO PUBLICITARIO HORIZONTAL (FULL IMAGE BACKGROUND)
+   Faldón publicitario con imagen a pantalla completa en el fondo.
+   ========================================================================== */
+
+.ad-faldon-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  height: 210px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  color: #ffffff;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: #0d1326;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease;
+}
+
+.ad-faldon-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Imagen de fondo completa */
+.ad-faldon-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ad-faldon-banner:hover .ad-faldon-bg-image {
+  transform: scale(1.04);
+}
+
+/* Overlay para contraste y legibilidad */
+.ad-faldon-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.15) 35%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  transition: background 0.35s ease;
+}
+
+.ad-faldon-banner:hover .ad-faldon-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.1) 35%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+}
+
+/* ==================== BARRA SUPERIOR ==================== */
+.ad-faldon-top-bar {
+  position: relative;
+  z-index: 3;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.ad-faldon-tag-ad {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ad-faldon-tag-ad i {
+  font-size: 11px;
+  color: #fbbf24;
+}
+
+.ad-faldon-badge-category {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.2px;
+}
+
+.ad-faldon-badge-category i {
+  font-size: 12px;
+  color: #93c5fd;
+}
+
+/* ==================== CUERPO INFORMATIVO ==================== */
+.ad-faldon-body {
+  position: relative;
+  z-index: 3;
+  padding: 14px 22px 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ad-faldon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 65%;
+  text-align: left;
+}
+
+.ad-faldon-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #93c5fd;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.ad-faldon-location i {
+  font-size: 11px;
+}
+
+.ad-faldon-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.3px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+  transition: color 0.25s ease;
+}
+
+.ad-faldon-banner:hover .ad-faldon-title {
+  color: #ffffff;
+  text-shadow: 0 2px 16px rgba(59, 130, 246, 0.8);
+}
+
+.ad-faldon-slogan {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 2px 0 0 0;
+  line-height: 1.4;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==================== ACCION Y ENLACES SOCIALES ==================== */
+.ad-faldon-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.ad-faldon-action-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ad-faldon-social-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Botones de Icono Social Individuales */
+.ad-social-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ad-social-icon-btn:hover {
+  transform: translateY(-3px) scale(1.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Web Oficial */
+.ad-social-icon-btn.web:hover {
+  background: var(--color-blue-primary, #0d47ff);
+  border-color: #60a5fa;
+  box-shadow: 0 0 16px rgba(13, 71, 255, 0.6);
+}
+
+/* Instagram */
+.ad-social-icon-btn.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: #ff80bf;
+  box-shadow: 0 0 16px rgba(225, 48, 108, 0.6);
+}
+
+/* TikTok */
+.ad-social-icon-btn.tiktok:hover {
+  background: #000000;
+  border-color: #25f4ee;
+  box-shadow: 0 0 16px rgba(37, 244, 238, 0.6);
+}
+
+.ad-social-icon-btn.tiktok:hover i {
+  color: #25f4ee;
+}
+
+/* Facebook */
+.ad-social-icon-btn.facebook:hover {
+  background: #1877f2;
+  border-color: #93c5fd;
+  box-shadow: 0 0 16px rgba(24, 119, 242, 0.6);
+}
+
+/* ==================== RESPONSIVIDAD ==================== */
+@media (max-width: 768px) {
+  .ad-faldon-banner {
+    height: 185px;
+    border-radius: 16px;
+  }
+
+  .ad-faldon-top-bar {
+    padding: 10px 14px;
+  }
+
+  .ad-faldon-body {
+    padding: 10px 14px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ad-faldon-info {
+    max-width: 100%;
+  }
+
+  .ad-faldon-title {
+    font-size: 20px;
+  }
+
+  .ad-faldon-slogan {
+    font-size: 12px;
+    -webkit-line-clamp: 1;
+  }
+
+  .ad-faldon-action {
+    padding: 4px 10px;
+    font-size: 11px;
+    align-self: flex-start;
+  }
+}

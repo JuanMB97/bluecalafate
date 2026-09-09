@@ -1,0 +1,92 @@
+.contact-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  color: var(--color-blue-dark);
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.icon-whatsapp {
+  color: var(--color-whatsapp);
+}
+
+.icon-email {
+  color: var(--color-blue-primary);
+}
+
+.icon-location {
+  color: var(--color-danger);
+}
+
+.contact-card h3 {
+  font-size: 20px;
+  color: var(--color-blue-dark);
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.contact-card p.contact-location {
+  margin-bottom: 0;
+}
+
+.contact-whatsapp-btn {
+  background: var(--color-whatsapp);
+  color: var(--color-text-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: var(--shadow-whatsapp);
+  transition: all var(--transition-fast);
+}
+
+.contact-whatsapp-btn:hover {
+  background: var(--color-whatsapp-hover);
+  transform: translateY(-2px);
+}
+
+.contact-email-link {
+  color: var(--color-blue-primary);
+  font-weight: 600;
+  word-break: break-all;
+}

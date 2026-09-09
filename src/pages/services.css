@@ -1,0 +1,22 @@
+.services-header {
+  max-width: 1300px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+}
+
+.services-header h2 {
+  font-size: 32px;
+  color: var(--color-blue-dark);
+  margin-bottom: 10px;
+}
+
+.services-header p {
+  color: var(--color-text-secondary);
+}
+
+.services-loading {
+  text-align: center;
+  color: var(--color-blue-dark);
+  padding: 40px;
+  font-weight: 600;
+}

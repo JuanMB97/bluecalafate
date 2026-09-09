@@ -1,0 +1,45 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.notfound-title {
+  font-size: 96px;
+  font-weight: 800;
+  color: var(--color-blue-primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.notfound-subtitle {
+  font-size: 28px;
+  color: var(--color-blue-dark);
+  margin: 16px 0 8px;
+}
+
+.notfound-text {
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin-bottom: 32px;
+}
+
+.notfound-btn {
+  background: var(--color-blue-primary);
+  color: var(--color-text-white);
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-blue);
+  transition: all var(--transition-fast);
+}
+
+.notfound-btn:hover {
+  background: var(--color-blue-hover);
+  transform: translateY(-2px);
+}

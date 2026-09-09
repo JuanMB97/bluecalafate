@@ -1,0 +1,73 @@
+.container-social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container-social-media h4 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-ico {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-border-input);
+  transition: all 0.25s ease;
+}
+
+.social-ico i {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.social-ico:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.social-ico:hover i {
+  transform: scale(1.1);
+}
+
+.social-ico.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: rgba(244, 63, 94, 0.4);
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.25);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.social-ico.tiktok:hover {
+  color: #22d3ee;
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 4px 15px rgba(34, 211, 238, 0.25);
+}
+
+.social-ico.facebook:hover {
+  color: var(--color-blue-medium);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+}

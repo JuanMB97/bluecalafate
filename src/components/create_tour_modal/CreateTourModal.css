@@ -1,0 +1,656 @@
+/* CreateTourModal.css */
+.tour-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 69, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tour-modal-container {
+  background: var(--color-bg-card);
+  border-radius: 24px;
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px -15px rgba(10, 20, 69, 0.35);
+  overflow: hidden;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--color-border-light);
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(20px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.tour-modal-header {
+  padding: 24px 30px;
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--color-bg-subtle) 0%, var(--color-bg-card) 100%);
+}
+
+.tour-modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tour-modal-header-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-blue-glow);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-white);
+  font-size: 22px;
+  box-shadow: var(--shadow-blue);
+}
+
+.tour-modal-header-info h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -0.02em;
+}
+
+.tour-modal-header-info p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.tour-modal-close-btn {
+  background: var(--color-bg-muted);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 16px;
+  transition: all var(--transition-fast);
+}
+
+.tour-modal-close-btn:hover {
+  background: var(--color-border-light);
+  color: var(--color-text-dark);
+  transform: rotate(90deg);
+}
+
+/* Modal Content / Form Body */
+.tour-modal-body {
+  padding: 24px 30px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Form Sections */
+.tour-form-section {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-light);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s;
+}
+
+.tour-form-section:focus-within {
+  border-color: var(--color-blue-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.tour-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -0.01em;
+}
+
+.tour-section-title i {
+  color: var(--color-blue-primary);
+  font-size: 16px;
+}
+
+/* Grid Layouts */
+.tour-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tour-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+/* Input Styles */
+.tour-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tour-field-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-body);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tour-field-group label .tour-hint {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* Required & Optional Badges */
+.tour-badge-required {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  margin-left: 6px;
+  letter-spacing: 0.5px;
+}
+
+.tour-badge-optional {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  margin-left: 6px;
+  letter-spacing: 0.5px;
+}
+
+.tour-input,
+.tour-select,
+.tour-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-input);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--color-text-dark);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.tour-input:focus,
+.tour-select:focus,
+.tour-textarea:focus {
+  border-color: var(--color-blue-primary);
+  box-shadow: 0 0 0 3px rgba(13, 71, 255, 0.12);
+  background: var(--color-bg-card);
+}
+
+.tour-input::placeholder,
+.tour-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.tour-textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* Suggestion Pills / Quick Helpers */
+.tour-quick-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.tour-pill-btn {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-input);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--color-text-body);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.tour-pill-btn:hover {
+  border-color: var(--color-blue-primary);
+  color: var(--color-blue-primary);
+  background: var(--color-blue-surface);
+}
+
+.tour-pill-btn.active {
+  background: var(--color-blue-primary);
+  border-color: var(--color-blue-primary);
+  color: var(--color-text-white);
+}
+
+/* ==================== DRAG & DROP DROPZONES ==================== */
+.tour-dropzone {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 2px dashed var(--color-border-input);
+  border-radius: 14px;
+  padding: 14px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.tour-dropzone:hover {
+  border-color: var(--color-blue-medium);
+  background: var(--color-bg-subtle);
+}
+
+.tour-dropzone.drag-over {
+  border-color: var(--color-blue-primary);
+  background: var(--color-blue-surface);
+  box-shadow: 0 0 0 4px rgba(13, 71, 255, 0.15);
+  transform: scale(1.01);
+}
+
+.tour-dropzone.has-image {
+  padding: 0;
+  border-style: solid;
+  border-color: var(--color-border-input);
+}
+
+.tour-dropzone-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-secondary);
+  padding: 10px;
+}
+
+.tour-dropzone-icon {
+  font-size: 28px;
+  color: var(--color-blue-medium);
+}
+
+.tour-dropzone-empty strong {
+  font-size: 13px;
+  color: var(--color-text-dark);
+}
+
+.tour-dropzone-empty span {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.tour-dropzone-preview {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  display: flex;
+}
+
+.tour-dropzone-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tour-dropzone-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--color-text-white);
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  padding: 10px;
+  text-align: center;
+}
+
+.tour-dropzone:hover .tour-dropzone-overlay {
+  opacity: 1;
+}
+
+.tour-dropzone-overlay i {
+  font-size: 20px;
+}
+
+/* Gallery Dropzone & Multi Preview Grid */
+.tour-gallery-dropzone {
+  min-height: 90px;
+  background: var(--color-bg-subtle);
+}
+
+.tour-gallery-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tour-gallery-item {
+  position: relative;
+  height: 75px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-input);
+  box-shadow: var(--shadow-sm);
+}
+
+.tour-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-gallery-remove-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.85);
+  color: var(--color-text-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tour-gallery-remove-btn:hover {
+  background: var(--color-danger-dark);
+  transform: scale(1.15);
+}
+
+/* Switch Toggle for VIP Option */
+.tour-vip-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg-card);
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-border-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tour-vip-toggle-wrap:hover {
+  border-color: var(--color-border-input);
+}
+
+.tour-vip-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tour-vip-info strong {
+  font-size: 14px;
+  color: var(--color-text-dark);
+}
+
+.tour-vip-info span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.tour-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.tour-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.tour-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-border-input);
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+.tour-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--color-bg-card);
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.tour-switch input:checked + .tour-slider {
+  background-color: var(--color-blue-primary);
+}
+
+.tour-switch input:checked + .tour-slider:before {
+  transform: translateX(20px);
+}
+
+/* ==================== LIVE TOURCARD PREVIEW ==================== */
+.tour-modal-live-preview-section {
+  background: var(--gradient-blue-dark);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(7, 14, 40, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-live-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tour-modal-live-preview-section .tour-section-title {
+  color: var(--color-bg-subtle);
+}
+
+.tour-modal-live-preview-section .tour-section-title i {
+  color: var(--color-blue-light);
+}
+
+.tour-live-preview-badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--color-blue-light);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.tour-preview-card-wrapper {
+  max-width: 340px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Modal Error Banner */
+.tour-modal-error {
+  background: var(--color-danger-bg);
+  border: 1.5px solid var(--color-danger-border);
+  color: var(--color-danger-dark);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Modal Footer Actions */
+.tour-modal-footer {
+  padding: 18px 30px;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  background: var(--color-bg-subtle);
+}
+
+.tour-btn-cancel {
+  padding: 10px 20px;
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-input);
+  border-radius: 12px;
+  color: var(--color-text-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tour-btn-cancel:hover {
+  background: var(--color-bg-muted);
+  color: var(--color-text-dark);
+}
+
+.tour-btn-submit {
+  padding: 10px 24px;
+  background: var(--gradient-blue-primary);
+  border: none;
+  border-radius: 12px;
+  color: var(--color-text-white);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-blue);
+  transition: all 0.2s;
+}
+
+.tour-btn-submit:hover:not(:disabled) {
+  background: var(--color-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13, 71, 255, 0.4);
+}
+
+.tour-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.tour-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: tourSpin 0.7s linear infinite;
+}
+
+@keyframes tourSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tour-grid-2,
+  .tour-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .tour-modal-container {
+    max-height: 95vh;
+  }
+  .tour-modal-header,
+  .tour-modal-body,
+  .tour-modal-footer {
+    padding: 16px 20px;
+  }
+}

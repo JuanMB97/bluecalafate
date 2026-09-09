@@ -1,5 +1,5 @@
 import apiClient from '../api/client';
-import type { Tour } from '../types';
+import type { Tour, DeleteResponse } from '../types';
 
 export const tourService = {
   /**
@@ -17,6 +17,31 @@ export const tourService = {
     const response = await apiClient.get<Tour>(`/tours/${slug}`);
     return response.data;
   },
+
+  /**
+   * Actualiza los datos de un tour en la API
+   */
+  async update(id: string, data: Partial<Tour>): Promise<Tour> {
+    const response = await apiClient.put<Tour>(`/tours/${id}`, data);
+    return response.data;
+  },
+
+  /**
+   * Crea un nuevo tour en la API
+   */
+  async create(data: Omit<Tour, 'id'>): Promise<Tour> {
+    const response = await apiClient.post<Tour>('/tours', data);
+    return response.data;
+  },
+
+  /**
+   * Elimina un tour en la API
+   */
+  async delete(id: string): Promise<DeleteResponse> {
+    const response = await apiClient.delete<DeleteResponse>(`/tours/${id}`);
+    return response.data;
+  },
 };
 
 export default tourService;
+

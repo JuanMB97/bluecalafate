@@ -1,9 +1,9 @@
-.box-navbar{
+.box-navbar {
   position: absolute;
-  z-index:99;
+  z-index: 99;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   transition: 0.3s;
   width: 100%;
@@ -11,94 +11,146 @@
 
 .nav-links {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-full);
+  padding: 6px 10px;
+  box-shadow: 0 10px 25px -5px rgba(10, 20, 69, 0.08), 0 0 0 1px rgba(13, 71, 255, 0.06);
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .nav-link {
-  text-decoration:none;
-  color:#0a1445;
-  font-weight:600;
-  font-size:14px;
-  transition: .2s ease-out;
-  
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: 0.03em;
+  padding: 9px 20px;
+  border-radius: 30px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.nav-link:hover{
-  transform: scale(1.03);
+.nav-link:hover {
+  color: var(--color-blue-primary);
+  background: rgba(13, 71, 255, 0.07);
+  transform: translateY(-1px);
   cursor: pointer;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
 }
 
 .nav-link.active {
-  color: #0d47ff;
-  border-bottom: 2px solid #0d47ff;
-  padding-bottom: 2px;
+  color: var(--color-text-white);
+  background: var(--gradient-blue-primary);
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-1px);
 }
 
-.nav-whatsapp{
-  position: fixed;
-  right: 5px;
+.nav-link.active:hover {
+  color: var(--color-text-white);
+  background: linear-gradient(135deg, var(--color-blue-hover) 0%, #1e3a8a 100%);
+  box-shadow: 0 6px 18px rgba(13, 71, 255, 0.45);
+}
+
+.nav-actions {
   display: flex;
-  padding-right: 5%;
-  height: 100%;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-right: 40px;
 }
 
-.box-whatsapp-btn{
-  display: flex;
-  justify-content: center;
-  background:green;
-  padding: 2px;
-  border-radius:50px;
-  text-decoration: none;
-  
-}
 
-.box-whatsapp-btn img {
-  height: 50px;
-  transition: .2s ease-in-out;
-  border-radius: 50%;
-  border: 2px solid green;
-}
-
-.box-whatsapp-btn img:hover{
-  transform: scale(1.1);
-
-}
-
-.box-logo{ 
+.box-logo {
   height: 100%;
   display: flex;
   justify-content: center;
- 
 }
-.box-logo img{
+
+.box-logo img {
   height: 150px;
+
+}
+
+.mobile-icon {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .box-navbar {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 10px;
-    position: relative;
-    background: #fff;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    position: fixed;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
   }
+
+  .box-logo {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
+  }
+
   .box-logo img {
     height: 80px;
   }
+
   .nav-links {
     flex-wrap: wrap;
-    justify-content: center;
+    width: 90%;
+    justify-content: space-evenly;
     gap: 15px;
+    background-color: white;
+    position: fixed;
+    padding: 5px;
+    bottom: 0;
+    margin-bottom: 5px;
+    height: 60px;
+    align-items: center;
+    border-radius: 1000px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
-  .nav-whatsapp {
-    position: static;
+
+  .nav-link {
+    height: 50px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 0;
-    margin-bottom: 10px;
+    color: #0d47ff;
+
+  }
+
+  .nav-actions {
+    justify-content: center;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .mobile-icon {
+    display: block;
+    color: #0d47ff;
+    font-size: 25px;
+    display: flex;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .desktop-icon {
+    display: none;
   }
 }

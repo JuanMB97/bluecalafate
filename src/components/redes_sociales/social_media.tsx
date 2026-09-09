@@ -1,37 +1,45 @@
-import instagramIco from '../../assets/instagram.png';
-import tiktokIco from '../../assets/tiktok.png';
-import facebookIco from '../../assets/facebook.png';
+import './social_media.css';
+import { useTranslation } from 'react-i18next';
+import type { SocialMediaProps } from '../../types';
 
-function SocialMedia() {
+function SocialMedia({ showTitle = true }: SocialMediaProps) {
+  const { t } = useTranslation();
+
   return (
-    <div>
-      <h4>SEGUINOS EN</h4>
+    <div className="container-social-media">
+      {showTitle && <h4>{t('footer.follow_us', 'SEGUINOS EN')}</h4>}
       <div className="social-icons">
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/bluecalafate"
           target="_blank"
           rel="noopener noreferrer"
           title="Instagram"
+          className="social-ico instagram"
+          aria-label="Instagram"
         >
-          <img src={instagramIco} alt="Instagram" className="fa-brands fa-instagram" />
+          <i className="fi fi-brands-instagram"></i>
         </a>
 
         <a
-          href="https://www.tiktok.com/"
+          href="https://www.tiktok.com/@bluecalafate"
           target="_blank"
           rel="noopener noreferrer"
           title="TikTok"
+          className="social-ico tiktok"
+          aria-label="TikTok"
         >
-          <img src={tiktokIco} alt="TikTok" className="fa-brands fa-tiktok" />
+          <i className="fi fi-brands-tik-tok"></i>
         </a>
 
         <a
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/profile.php?id=100066924844790"
           target="_blank"
           rel="noopener noreferrer"
           title="Facebook"
+          className="social-ico facebook"
+          aria-label="Facebook"
         >
-          <img src={facebookIco} alt="Facebook" className="fa-brands fa-facebook-f" />
+          <i className="fi fi-brands-facebook"></i>
         </a>
       </div>
     </div>

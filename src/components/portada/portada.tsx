@@ -1,29 +1,19 @@
+import type { PortadaProps } from '../../types';
 import './portada.css';
-import usersIco from '../../assets/users_ico.png';
-import clockIco from '../../assets/clock_ico.png';
-import securityIco from '../../assets/security_ico.png';
-
-interface PortadaProps {
-  place?: string;
-  phrase?: string;
-  image?: string;
-  highlightText?: string;
-  serviceType?: string;
-  dailyDepartures?: string;
-}
 
 function Portada({
   place = 'Traslados en el sur de Argentina',
   phrase = 'Traslado compartido y privado en El Calafate y El Chaltén. Cómodo, seguro y económico.',
   image = 'portada_car.jpeg',
   highlightText = 'Compartido',
-  serviceType = 'Servicio Compartido',
-  dailyDepartures = 'Salidas diarias',
 }: PortadaProps) {
   // Vite dynamic asset resolution
-  const imageUrl = image.startsWith('http') || image.startsWith('/')
-    ? image
-    : new URL(`../../assets/${image}`, import.meta.url).href;
+  const imageUrl =
+    image && typeof image === 'string' && (image.startsWith('http') || image.startsWith('/'))
+      ? image
+      : image && typeof image === 'string'
+        ? new URL(`../../assets/${image}`, import.meta.url).href
+        : '';
 
   return (
     <section className="pm-shared-section">
@@ -39,8 +29,19 @@ function Portada({
             </h1>
 
             <p>{phrase}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-            <div className="pm-features">
+export { Portada };
+
+
+/*
+
+ <div className="pm-features">
               <div className="pm-feature">
                 <img className="pm-icon-p" src={usersIco} alt="Servicio" />
                 <div>
@@ -62,11 +63,5 @@ function Portada({
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-export { Portada };
+            */

@@ -1,102 +1,63 @@
+import { useTranslation } from 'react-i18next';
 import { Portada } from '../components/portada/portada';
 import { Banda_Beneficios } from '../components/banda_beneficios/banda_beneficios';
-import whatsappIco from '../assets/whatsapp.png';
-import logoEmail from '../assets/logo_email.png';
-import logoAddress from '../assets/logo_address.png';
-
+import './Contact.css';
 
 export function ContactPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Portada
-        place="Contacto y Reservas"
-        phrase="¿Tienes dudas sobre traslados o excursiones? Escríbenos directamente y te responderemos al instante."
+        place={t('portada.contact_title', 'Contacto y Reservas')}
+        phrase={t('portada.contact_phrase', '¿Tienes dudas sobre traslados o excursiones? Escríbenos directamente y te responderemos al instante.')}
         image="portada.jpg"
-        highlightText="Directo"
-        serviceType="Respuesta Rápida"
-        dailyDepartures="Guardias 24hs"
+        highlightText={t('portada.contact_highlight', 'Directo')}
+        serviceType={t('portada.fast_response', 'Respuesta Rápida')}
+        dailyDepartures={t('portada.guards_24h', 'Guardias 24hs')}
       />
 
-      <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '0 20px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '36px', color: '#0a1445', marginBottom: '12px' }}>
-            Medios de Contacto Oficiales
+      <section className="contact-section">
+        <div className="contact-header">
+          <h2>
+            {t('contact_page.title', 'Medios de Contacto Oficiales')}
           </h2>
-          <p style={{ color: '#64748b', fontSize: '18px' }}>
-            Estamos a tu disposición para planificar tu viaje por la Patagonia.
+          <p>
+            {t('contact_page.subtitle', 'Estamos a tu disposición para planificar tu viaje por la Patagonia.')}
           </p>
         </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '24px',
-            marginBottom: '50px',
-          }}
-        >
-          <div
-            style={{
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
-              borderRadius: '16px',
-              padding: '30px',
-              textAlign: 'center',
-            }}
-          >
-            <img src={whatsappIco} alt="WhatsApp" style={{ height: '48px', marginBottom: '16px' }} />
-            <h3 style={{ fontSize: '20px', color: '#0a1445', marginBottom: '8px' }}>WhatsApp</h3>
-            <p style={{ color: '#64748b', marginBottom: '16px' }}>Atención inmediata</p>
+        <div className="contact-grid">
+          <div className="contact-card">
+            <i className="fi fi-brands-whatsapp contact-icon icon-whatsapp"></i>
+            <h3>{t('contact_page.whatsapp_label', 'WhatsApp')}</h3>
+            <p>{t('contact_page.whatsapp_status', 'Atención inmediata')}</p>
             <a
               href="https://wa.me/5492966764900"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                background: '#25D366',
-                color: 'white',
-                padding: '10px 20px',
-                borderRadius: '25px',
-                textDecoration: 'none',
-                fontWeight: 600,
-                display: 'inline-block',
-              }}
+              className="contact-whatsapp-btn"
             >
               +54 9 2966 764900
             </a>
           </div>
 
-          <div
-            style={{
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
-              borderRadius: '16px',
-              padding: '30px',
-              textAlign: 'center',
-            }}
-          >
-            <img src={logoEmail} alt="Email" style={{ height: '48px', marginBottom: '16px' }} />
-            <h3 style={{ fontSize: '20px', color: '#0a1445', marginBottom: '8px' }}>Correo Electrónico</h3>
-            <p style={{ color: '#64748b', marginBottom: '16px' }}>Cotizaciones y consultas</p>
+          <div className="contact-card">
+            <i className="fi fi-rr-envelope contact-icon icon-email"></i>
+            <h3>{t('contact_page.email_label', 'Correo Electrónico')}</h3>
+            <p>{t('contact_page.email_status', 'Cotizaciones y consultas')}</p>
             <a
               href="mailto:bluecalafatepatagonia@gmail.com"
-              style={{ color: '#0d47ff', fontWeight: 600, wordBreak: 'break-all' }}
+              className="contact-email-link"
             >
               bluecalafatepatagonia@gmail.com
             </a>
           </div>
 
-          <div
-            style={{
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
-              borderRadius: '16px',
-              padding: '30px',
-              textAlign: 'center',
-            }}
-          >
-            <img src={logoAddress} alt="Ubicación" style={{ height: '48px', marginBottom: '16px' }} />
-            <h3 style={{ fontSize: '20px', color: '#0a1445', marginBottom: '8px' }}>Ubicación</h3>
-            <p style={{ color: '#64748b' }}>El Calafate, Santa Cruz, Patagonia Argentina</p>
+          <div className="contact-card">
+            <i className="fi fi-rr-marker contact-icon icon-location"></i>
+            <h3>{t('contact_page.location_label', 'Ubicación')}</h3>
+            <p className="contact-location">{t('contact_page.location_text', 'El Calafate, Santa Cruz, Patagonia Argentina')}</p>
           </div>
         </div>
       </section>
@@ -107,3 +68,4 @@ export function ContactPage() {
 }
 
 export default ContactPage;
+

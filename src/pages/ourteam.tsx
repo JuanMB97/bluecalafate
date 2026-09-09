@@ -1,37 +1,27 @@
+import { useTranslation } from 'react-i18next';
 import { Portada } from '../components/portada/portada';
 import { Banda_Beneficios } from '../components/banda_beneficios/banda_beneficios';
-import CardTravel from '../components/card-travel/card_travel';
+import VehicleCarousel from '../components/vehicle_carousel/VehicleCarousel';
+import './ourteam.css';
 
 export function OurTeamPage() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Portada
-        place="Sobre Nosotros"
-        phrase="Somos un equipo apasionado por la Patagonia, dedicados a brindar experiencias de traslado seguras, puntuales y memorables."
-        image="portada_car.jpeg"
-        highlightText="Blue Calafate"
-        serviceType="Choferes Profesionales"
-        dailyDepartures="Atención Personalizada"
+        place={t('portada.about_title', 'Sobre Nosotros')}
+        phrase={t('portada.about_phrase', 'Somos un equipo apasionado por la Patagonia, dedicados a brindar experiencias de traslado seguras, puntuales y memorables.')}
+        image="portada_car_.jpg"
+        highlightText={t('portada.about_highlight', 'Blue Calafate')}
+        serviceType={t('portada.professional_drivers', 'Choferes Profesionales')}
+        dailyDepartures={t('portada.personalized_attention', 'Atención Personalizada')}
       />
 
-      <section style={{ maxWidth: '1200px', margin: '60px auto', padding: '0 20px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h2 style={{ fontSize: '36px', color: '#0a1445', marginBottom: '16px' }}>
-            Nuestra Flota y Compromiso
-          </h2>
-          <p style={{ color: '#64748b', fontSize: '18px', maxWidth: '750px', margin: '0 auto' }}>
-            Contamos con unidades modernas, habilitadas y equipadas para el confort en los caminos patagónicos.
-          </p>
-        </div>
-
-        <div className="conteiner-cards">
-          <CardTravel img="spin_car.png" capacidad={4} />
-          <CardTravel img="expert_car.webp" capacidad={6} />
-          <CardTravel img="h1_car.png" capacidad={11} />
-          <CardTravel img="sprinter9plus1.png" capacidad={9} />
-          <CardTravel img="sprinter19plus1.png" capacidad={19} />
-        </div>
-      </section>
+      <VehicleCarousel
+        title={t('fleet.about_title', 'Nuestra Flota y Compromiso')}
+        subtitle={t('fleet.about_subtitle', 'Contamos con unidades modernas, habilitadas y equipadas para el confort en los caminos patagónicos.')}
+      />
 
       <Banda_Beneficios />
     </>
@@ -39,3 +29,4 @@ export function OurTeamPage() {
 }
 
 export default OurTeamPage;
+

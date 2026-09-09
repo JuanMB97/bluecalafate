@@ -1,0 +1,112 @@
+/* ==========================================================================
+   BLUE CALAFATE - DESIGN SYSTEM & CSS VARIABLES
+   ========================================================================== */
+
+:root {
+  /* ==========================================
+     1. PALETA DE AZULES (Branding Blue Calafate)
+     ========================================== */
+  --color-blue-dark: #0a1445;        /* Azul corporativo principal / Títulos / Navbar */
+  --color-blue-navy: #172554;        /* Azul medianoche / Superficies oscuras */
+  --color-blue-primary: #0d47ff;     /* Azul eléctrico / Acciones primarias / Botones */
+  --color-blue-hover: #093cd6;       /* Azul eléctrico hover */
+  --color-blue-medium: #3b82f6;      /* Azul medio / Badges / Enlaces */
+  --color-blue-light: #93c5fd;       /* Azul claro / Acentos / Bordes activos */
+  --color-blue-border: #bfdbfe;      /* Azul pastel para bordes sutiles */
+  --color-blue-bg: #eef4ff;          /* Fondo azul suave para alertas / cajas */
+  --color-blue-surface: #eff6ff;     /* Superficie azul muy tenue */
+
+  /* Gradientes de Azul */
+  --gradient-blue-primary: linear-gradient(135deg, #0d47ff 0%, #1e40af 100%);
+  --gradient-blue-dark: linear-gradient(135deg, #0a1445 0%, #172554 100%);
+  --gradient-blue-glow: linear-gradient(135deg, #0d47ff 0%, #3b82f6 100%);
+
+  /* ==========================================
+     2. PALETA DE DORADOS (Servicios VIP / Premium)
+     ========================================== */
+  --color-gold-primary: #d97706;     /* Dorado cálido / Destacados */
+  --color-gold-vip: #c59b27;         /* Dorado metálico para servicios VIP */
+  --color-gold-dark: #b45309;        /* Dorado oscuro / Textos sobre fondo claro */
+  --color-gold-light: #fef3c7;       /* Fondo dorado pastel / Badges VIP */
+  --color-gold-border: #fde68a;      /* Borde dorado suave */
+
+  /* Gradientes Dorados */
+  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --gradient-gold-vip: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  --gradient-gold-badge: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+
+  /* ==========================================
+     3. PALETA DE VERDES (WhatsApp / Confirmado / Éxito)
+     ========================================== */
+  --color-whatsapp: #25d366;         /* Verde oficial de WhatsApp */
+  --color-whatsapp-hover: #1ea952;   /* Verde WhatsApp hover */
+  --color-whatsapp-dark: #128c7e;    /* Verde oscuro WhatsApp */
+  --color-whatsapp-bg: #dcfce7;      /* Fondo verde suave */
+  --color-whatsapp-border: #86efac;  /* Borde verde */
+
+  --color-success: #16a34a;          /* Verde estado exitoso / Confirmado */
+  --color-success-dark: #15803d;     /* Verde oscuro texto */
+  --color-success-bg: #dcfce7;       /* Fondo éxito */
+  --color-success-border: #bbf7d0;   /* Borde éxito */
+
+  /* Gradiente WhatsApp */
+  --gradient-whatsapp: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+
+  /* ==========================================
+     4. PALETA DE GRISES Y SUPERFICIES (Fondos & Textos)
+     ========================================== */
+  --color-bg-app: #f5f7fc;           /* Fondo general de la aplicación */
+  --color-bg-card: #ffffff;          /* Fondo de tarjetas y paneles */
+  --color-bg-subtle: #f8fafc;        /* Fondo sutil / Secciones secundarias */
+  --color-bg-muted: #f1f5f9;         /* Fondo gris tenue / Inputs desactivados */
+
+  --color-border-light: #e2e8f0;     /* Borde estándar de tarjetas */
+  --color-border-input: #cbd5e1;     /* Borde estándar de inputs */
+  --color-border-strong: #94a3b8;    /* Borde contrastado */
+
+  /* Textos / Tipografía */
+  --color-text-main: #0a1445;        /* Texto principal / Títulos */
+  --color-text-body: #334155;        /* Texto de párrafos / Cuerpo */
+  --color-text-dark: #1e293b;        /* Texto oscuro estándar */
+  --color-text-secondary: #64748b;   /* Texto secundario / Fechas / Subtítulos */
+  --color-text-muted: #94a3b8;       /* Texto atenuado / Placeholders / Deshabilitado */
+  --color-text-white: #ffffff;       /* Texto blanco */
+
+  /* ==========================================
+     5. PALETA DE ROJOS Y NARANJAS (Advertencias & Cancelaciones)
+     ========================================== */
+  --color-warning: #f59e0b;          /* Naranja de advertencia / Pendiente */
+  --color-warning-dark: #d97706;     /* Naranja oscuro para texto */
+  --color-warning-bg: #fffbeb;       /* Fondo de advertencia suave */
+  --color-warning-border: #fde68a;   /* Borde de advertencia */
+
+  --color-danger: #dc2626;           /* Rojo peligro / Cancelado / Eliminar */
+  --color-danger-dark: #b91c1c;      /* Rojo oscuro */
+  --color-danger-bg: #fee2e2;        /* Fondo rojo suave / Alertas de error */
+  --color-danger-border: #fecaca;    /* Borde rojo */
+
+  /* Gradientes de Alerta */
+  --gradient-warning: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  --gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+
+  /* ==========================================
+     6. RADIOS Y SOMBRAS ESTÁNDAR
+     ========================================== */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(10, 20, 69, 0.06);
+  --shadow-lg: 0 16px 36px -8px rgba(10, 20, 69, 0.12);
+  --shadow-blue: 0 4px 15px rgba(13, 71, 255, 0.35);
+  --shadow-whatsapp: 0 4px 15px rgba(37, 211, 102, 0.35);
+  --shadow-card: 0 4px 20px rgba(10, 20, 69, 0.05);
+
+  /* Transición estándar */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}

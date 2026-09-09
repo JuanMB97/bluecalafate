@@ -1,0 +1,166 @@
+.app-main-loading {
+  text-align: center;
+  color: var(--color-blue-dark);
+  padding: 40px;
+  font-weight: 600;
+}
+
+/* Modal Publicidad / Promo */
+.promo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 20, 69, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: promoFadeIn 0.3s ease-out;
+}
+
+.promo-modal-content {
+  position: relative;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  max-width: 440px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: promoScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.promo-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-blue-dark);
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.promo-modal-close:hover {
+  background: var(--color-blue-primary);
+  color: var(--color-text-white);
+  transform: scale(1.1);
+}
+
+.promo-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo-modal-img-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--color-blue-bg);
+  transition: opacity var(--transition-fast);
+}
+
+.promo-modal-img-link:hover {
+  opacity: 0.95;
+}
+
+.promo-modal-img {
+  width: 85%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 65vh;
+  transition: transform var(--transition-normal);
+}
+
+.promo-modal-img-link:hover .promo-modal-img {
+  transform: scale(1.02);
+}
+
+.promo-modal-footer {
+  padding: 14px 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-bg-muted);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.promo-modal-btn-action {
+  background: var(--color-blue-primary);
+  color: var(--color-text-white);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-blue);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.promo-modal-btn-action:hover {
+  background: var(--color-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(13, 71, 255, 0.4);
+}
+
+.promo-modal-btn-close {
+  background: var(--color-bg-muted);
+  color: var(--color-text-body);
+  border: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.promo-modal-btn-close:hover {
+  background: var(--color-border-light);
+  color: var(--color-blue-dark);
+}
+
+@keyframes promoFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes promoScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+
+@media (max-width: 768px) {}

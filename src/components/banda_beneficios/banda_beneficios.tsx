@@ -1,40 +1,40 @@
-import securityIco from '../../assets/security_ico.png';
-import driverIco from '../../assets/driver_ico.png';
-import buslatIco from '../../assets/buslat_ico.png';
-import mountainIco from '../../assets/mountain_ico.png';
+import './benefits_banner.css';
+import { useTranslation } from 'react-i18next';
 
 function Banda_Beneficios() {
+  const { t } = useTranslation();
+
   return (
     <div className="pm-benefits">
       <div className="pm-benefit">
-        <img className="pm-icon-p" src={securityIco} alt="Seguridad" />
+        <i className="fi fi-rs-shield-check pm-icon-p"></i>
         <div>
-          <strong>Salida Garantizada</strong>
-          <p>Todos los días desde El Calafate.</p>
+          <strong>{t('benefits.guaranteed_title', 'Salida Garantizada')}</strong>
+          <p>{t('benefits.guaranteed_desc', 'Todos los días desde El Calafate.')}</p>
         </div>
       </div>
 
       <div className="pm-benefit">
-        <img className="pm-icon-p" src={driverIco} alt="Chofer" />
+        <i className="fi fi-br-seatbelt-safety-driver"></i>
         <div>
-          <strong>Chofer Profesional</strong>
-          <p>Conductores habilitados.</p>
+          <strong>{t('benefits.driver_title', 'Chofer Profesional')}</strong>
+          <p>{t('benefits.driver_desc', 'Conductores habilitados.')}</p>
         </div>
       </div>
 
       <div className="pm-benefit">
-        <img className="pm-icon-p" src={buslatIco} alt="Comodidad" />
+        <i className="fi fi-rs-bus"></i>
         <div>
-          <strong>Comodidad</strong>
-          <p>Unidades modernas y confortables.</p>
+          <strong>{t('benefits.comfort_title', 'Comodidad')}</strong>
+          <p>{t('benefits.comfort_desc', 'Unidades modernas y confortables.')}</p>
         </div>
       </div>
 
       <div className="pm-benefit">
-        <img className="pm-icon-p" src={mountainIco} alt="Experiencia" />
+        <i className="fi fi-sr-mountain"></i>
         <div>
-          <strong>Experiencia Única</strong>
-          <p>Descubrí los paisajes más asombrosos del mundo.</p>
+          <strong>{t('benefits.unique_exp_title', 'Experiencia Única')}</strong>
+          <p>{t('benefits.unique_exp_desc', 'Descubrí los paisajes más asombrosos del mundo.')}</p>
         </div>
       </div>
     </div>

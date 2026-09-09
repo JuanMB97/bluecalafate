@@ -1,138 +1,129 @@
 import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 import './footer.css';
 import { SocialMedia } from '../redes_sociales/social_media';
 import portadaImg from '../../assets/portada.jpg';
-import logoLetra from '../../assets/logo_letra.png';
-import whatsappIco from '../../assets/whatsapp.png';
-import logoTel from '../../assets/logo_tel.png';
-import logoEmail from '../../assets/logo_email.png';
-import logoAddress from '../../assets/logo_address.png';
+import { PosterContact } from '../poster_contact/poster_contact';
 
 function Footer() {
+  const { t } = useTranslation();
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="blue-footer">
-      <img className="image-background-footer" src={portadaImg} alt="" />
-
-      <div className="footer-top">
-        <div className="conteiner-blue-footer">
-          <div className="footer-logo">
-            <Link to="/">
-              <img src={logoLetra} alt="Blue Calafate" />
-            </Link>
-          </div>
-
-          <p className="footer-description">
-            Traslados privados y experiencias únicas en El Calafate y El Chaltén.
-            Viajá cómodo, viajá seguro.
-          </p>
-
-          <div className="footer-whatsapp">
-            <div className="footer-whatsapp-icon">
-              <img src={whatsappIco} alt="WhatsApp" />
-            </div>
-
-            <div className="footer-whatsapp-text">
-              <small>RESERVAR POR WHATSAPP</small>
-              <strong>+54 9 2966 764900</strong>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-column">
-          <h3>
-            <i className="fa-solid fa-shield-check"></i>
-            ENLACES
-          </h3>
-
-          <ul>
-            <li><Link to="/" className="fa-solid fa-chevron-right"> Inicio</Link></li>
-            <li><Link to="/services" className="fa-solid fa-chevron-right"> Servicios</Link></li>
-            <li><Link to="/tours/perito-moreno" className="fa-solid fa-chevron-right"> Perito Moreno</Link></li>
-            <li><Link to="/tours/el-chalten" className="fa-solid fa-chevron-right"> El Chaltén</Link></li>
-            <li><Link to="/ourteam" className="fa-solid fa-chevron-right"> Nosotros</Link></li>
-            <li><Link to="/contact" className="fa-solid fa-chevron-right"> Contacto</Link></li>
-          </ul>
-        </div>
-
-        <div className="footer-column">
-          <h3>
-            <i className="fa-regular fa-clock"></i>
-            SERVICIOS
-          </h3>
-
-          <ul>
-            <li><Link to="/tours/traslado-aeropuerto" className='fa-solid'><i> </i>Traslados Aeropuerto</Link></li>
-            <li><Link to="/tours/perito-moreno" className="fa-solid"><i> </i>Glaciar Perito Moreno</Link></li>
-            <li><Link to="/tours/el-chalten" className="fa-solid"><i> </i>Traslado a El Chaltén</Link></li>
-            <li><Link to="/tours/city-tour" className="fa-solid"><i> </i>City Tour El Calafate</Link></li>
-            <li><Link to="/services" className="fa-solid"><i> </i>Traslados Premium</Link></li>
-          </ul>
-        </div>
-
-        <div className="footer-column">
-          <h3>
-            <i className="fa-solid fa-user-shield"></i>
-            NUESTROS DIFERENCIALES
-          </h3>
-
-          <ul>
-            <li><i className="fa-solid fa-circle-check">&#10004;</i> Servicio Privado y Compartido</li>
-            <li><i className="fa-solid fa-circle-check">&#10004;</i> Puntualidad Garantizada</li>
-            <li><i className="fa-solid fa-circle-check">&#10004;</i> Choferes Profesionales</li>
-            <li><i className="fa-solid fa-circle-check">&#10004;</i> Seguridad y Confianza</li>
-            <li><i className="fa-solid fa-circle-check">&#10004;</i> Confort Asegurado</li>
-          </ul>
-        </div>
-
-        <div className="footer-column">
-          <h3>
-            <i className="fa-solid fa-location-dot"></i>
-            CONTACTO
-          </h3>
-
-          <div className="container-info-footer">
-            <div className="contact-item">
-              <i className="fa-solid fa-phone">
-                <img className="pm-icon-p" src={logoTel} alt="Teléfono" />
-              </i>
-              <div>+54 9 2966 764900</div>
-            </div>
-
-            <div className="contact-item">
-              <i className="fa-solid fa-envelope">
-                <img className="pm-icon-p" src={logoEmail} alt="Email" />
-              </i>
-              <div>bluecalafatepatagonia@gmail.com</div>
-            </div>
-
-            <div className="contact-item">
-              <i className="fa-solid fa-location-dot">
-                <img className="pm-icon-p" src={logoAddress} alt="Ubicación" />
-              </i>
-              <div>El Calafate, Santa Cruz<br />Argentina</div>
-            </div>
-          </div>
-        </div>
+      <div className="footer-bg-wrapper">
+        <img className="image-background-footer" src={portadaImg} alt="" />
+        <div className="footer-overlay" />
       </div>
 
-      <div className="footer-bottom">
-        <div className="bottom-box">
-          <i className="fa-solid fa-lock"></i>
-          <div>
-            <h4>Tu reserva es 100% segura.</h4>
-            <p>Te confirmaremos todo por WhatsApp.</p>
+      <div className="footer-container">
+        <div className="footer-top">
+          {/* Columna 1: Marca y WhatsApp */}
+          <div className="footer-col-brand">
+            <PosterContact />
+          </div>
+
+          {/* Columna 2: Enlaces Rápidos */}
+          <div className="footer-col">
+            <h3 className="footer-col-title">
+              <i className="fi fi-rr-link-alt"></i>
+              {t('footer.links_title', 'ENLACES')}
+            </h3>
+
+            <ul className="footer-nav-list">
+              <li>
+                <Link to="/" onClick={handleScrollToTop}>
+                  <i className="fi fi-rr-angle-small-right"></i>
+                  {t('nav.home', 'Inicio')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" onClick={handleScrollToTop}>
+                  <i className="fi fi-rr-angle-small-right"></i>
+                  {t('nav.services', 'Servicios')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/ourteam" onClick={handleScrollToTop}>
+                  <i className="fi fi-rr-angle-small-right"></i>
+                  {t('nav.about', 'Nosotros')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={handleScrollToTop}>
+                  <i className="fi fi-rr-angle-small-right"></i>
+                  {t('nav.contact', 'Contacto')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 3: Información de Contacto y Redes */}
+          <div className="footer-col">
+            <h3 className="footer-col-title">
+              <i className="fi fi-rr-marker"></i>
+              {t('footer.contact_title', 'CONTACTO')}
+            </h3>
+
+            <div className="footer-contact-list">
+              <a
+                href="https://wa.me/5492966764900"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-contact-link"
+                title="WhatsApp"
+              >
+                <i className="fi fi-sr-phone-flip"></i>
+                <span>+54 9 2966 764900</span>
+              </a>
+
+              <a
+                href="mailto:bluecalafatepatagonia@gmail.com"
+                className="footer-contact-link"
+                title="Email"
+              >
+                <i className="fi fi-sr-envelope"></i>
+                <span>bluecalafatepatagonia@gmail.com</span>
+              </a>
+
+              <div className="footer-contact-link non-clickable">
+                <i className="fi fi-ss-marker"></i>
+                <span>El Calafate, Santa Cruz, Patagonia Argentina</span>
+              </div>
+            </div>
+
+            <div className="footer-social-wrapper">
+              <SocialMedia showTitle={true} />
+            </div>
           </div>
         </div>
 
-        <div className="bottom-box">
-          <SocialMedia />
-        </div>
+        {/* Sub-footer / Barra inferior */}
+        <div className="footer-bottom">
+          <div className="footer-copyright">
+            <p>© {currentYear} Blue Calafate Patagonia. {t('footer.all_rights_reserved', 'Todos los derechos reservados.')}</p>
+          </div>
 
-        <div className="bottom-box">
-          <i className="fa-solid fa-mountain"></i>
-          <div>
-            <h4>DISEÑADO CON ❤️</h4>
-            <p>EN LA PATAGONIA</p>
+          <div className="footer-developer">
+            <span className="developer-label">{t('footer.designed_by', 'DISEÑADO POR')}</span>
+            <a
+              href="https://github.com/JuanMB97"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="develop-link"
+              title="GitHub Juan Barreto"
+            >
+              <i className="fi fi-brands-github"></i>
+              <span>Juan Barreto</span>
+            </a>
           </div>
         </div>
       </div>

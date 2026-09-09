@@ -1,7 +1,18 @@
 import axios from 'axios';
 
-// URL base para el backend en NestJS. Puedes definir VITE_API_URL en un archivo .env
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+// Determina la URL base para el backend en NestJS.
+// Si no se define VITE_API_URL, utiliza la misma IP/host desde donde se accede al frontend (útil para celulares/tablets en la misma red Wi-Fi)
+const getApiBaseUrl = (): string => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  if (typeof window !== 'undefined' && window.location.hostname) {
+    return `http://${window.location.hostname}:3000/api`;
+  }
+  return 'http://localhost:3000/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,

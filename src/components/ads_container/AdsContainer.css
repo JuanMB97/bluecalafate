@@ -1,0 +1,93 @@
+/* ==========================================================================
+   BLUE CALAFATE - ADS CONTAINER SECTION (FALDONES PUBLICITARIOS)
+   ========================================================================== */
+
+.ads-container-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 35px auto 45px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ads-container-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ads-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-blue-primary);
+  color: var(--color-text-white);
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(13, 71, 255, 0.25);
+}
+
+.ads-section-badge i {
+  font-size: 13px;
+  color: #fbbf24;
+}
+
+.ads-section-title {
+  color: var(--color-text-main);
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.ads-section-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 16.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Lista de faldones publicitarios */
+.ads-faldones-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD
+   ========================================================================== */
+@media (max-width: 768px) {
+  .ads-container-section {
+    padding: 24px 16px;
+    margin: 20px auto 30px;
+  }
+
+  .ads-section-title {
+    font-size: 26px;
+  }
+
+  .ads-section-subtitle {
+    font-size: 14.5px;
+  }
+
+  .ads-faldones-list {
+    gap: 16px;
+  }
+}

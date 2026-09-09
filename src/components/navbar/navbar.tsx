@@ -1,9 +1,18 @@
 import { Link, NavLink } from 'react-router';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../language_switcher/LanguageSwitcher';
 import './navbar.css';
 import logoLetra from '../../assets/logo_letra.png';
-import logoWhatsapp from '../../assets/logo_whatsapp.png';
-
 function NavBar() {
+  const { t } = useTranslation();
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header className="box-navbar">
       <div className="box-logo">
@@ -15,41 +24,68 @@ function NavBar() {
       <nav className="nav-links">
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+          className={({ isActive }) => (isActive ? 'desktop-icon nav-link active' : 'desktop-icon nav-link')}
           end
         >
-          INICIO
+          {t('nav.home', 'INICIO')}
+        </NavLink>
+
+        <NavLink
+          to="/"
+          className="mobile-icon"
+          onClick={handleScrollToTop}
+          end
+        >
+          <i className="mobile-icon fi fi-sr-house-chimney"></i>
+        </NavLink>
+
+        <NavLink
+          to="/services"
+          className={({ isActive }) => (isActive ? 'desktop-icon nav-link active' : 'desktop-icon nav-link')}
+        >
+          {t('nav.services', 'SERVICIOS')}
         </NavLink>
         <NavLink
           to="/services"
-          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+          className="mobile-icon"
+          onClick={handleScrollToTop}
         >
-          SERVICIOS
+          <i className="mobile-icon fi fi-sr-land-layer-location"></i>
+        </NavLink>
+
+        <NavLink
+          to="/ourteam"
+          className={({ isActive }) => (isActive ? 'desktop-icon nav-link active' : 'desktop-icon nav-link')}
+        >
+          {t('nav.about', 'NOSOTROS')}
         </NavLink>
         <NavLink
           to="/ourteam"
-          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+          className="mobile-icon"
+          onClick={handleScrollToTop}
         >
-          NOSOTROS
+          <i className="mobile-icon fi fi-ss-employees"></i>
+        </NavLink>
+
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? 'desktop-icon nav-link active' : 'desktop-icon nav-link')}
+        >
+          {t('nav.contact', 'CONTACTO')}
         </NavLink>
         <NavLink
           to="/contact"
-          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+          className="mobile-icon"
+          onClick={handleScrollToTop}
         >
-          CONTACTO
+          <i className="mobile-icon fi fi-sr-land-layer-location"></i>
         </NavLink>
+
       </nav>
 
-      <div className="nav-whatsapp">
-        <a
-          className="box-whatsapp-btn"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://wa.me/5492966764900"
-          title="Contactar por WhatsApp"
-        >
-          <img src={logoWhatsapp} alt="WhatsApp" />
-        </a>
+      <div className="nav-actions">
+        <LanguageSwitcher />
+
       </div>
     </header>
   );
